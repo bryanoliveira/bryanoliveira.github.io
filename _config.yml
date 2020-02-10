@@ -11,7 +11,7 @@ title: 'Bryan L. M. de Oliveira'
 title_separator: '-'
 name: &name 'Bryan L. M. de Oliveira'
 description: &description 'Passionate computer scientist working towards artificial general intelligence through deep & reinforcement learning research.'
-url: https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: https://bryanoliveira.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: '' # the subpath of your site, e.g. "/blog"
 repository: 'bryanoliveira/bryanoliveira.github.io'
 teaser: # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
