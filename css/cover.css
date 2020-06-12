@@ -2,6 +2,10 @@ body {
     display: -ms-flexbox;
     display: flex;
     color: #333;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.02rem;
+    font-weight: 200;
+    font-size: 1.1rem;
 }
 
 .cover-container {
@@ -18,21 +22,24 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 100%;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-a {
+#sub-links a {
+    padding: 10px;
     opacity: 0.6;
     transition: opacity 0.1s ease-in-out;
 }
-a:hover {
+#sub-links a:hover {
     opacity: 0.8;
     text-decoration: none;
 }
 
-a.footer-link {
-    padding: 10px;
-}
-a.footer-link svg {
+#sub-links a svg {
     width: 20px;
     height: 20px;
+}
+
+#projects h2 {
+    font-size: 1.3rem;
 }
