@@ -2,7 +2,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     color: #333;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: sans-serif;
     letter-spacing: 0.02rem;
     font-weight: 200;
     font-size: 1.1rem;
@@ -16,8 +16,12 @@ a:hover {
     text-decoration: none;
 }
 
+#intro p {
+    font-size: 1.2rem;
+}
+
 .cover-container {
-    max-width: 42em;
+    max-width: 45em;
 }
 .cover {
     padding: 0 1.5rem;

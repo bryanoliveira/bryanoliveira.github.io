@@ -14,6 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Hi! I'm Bryan and this is my personal website." />
         <meta name="author" content="Bryan Oliveira" />
+        <link rel="icon" href="img/icon.png" />
         <title>Bryan Oliveira</title>
 
         <!-- Bootstrap core CSS -->
@@ -24,7 +25,7 @@
     <body>
         <div class="cover-container d-flex w-100 p-3 mx-auto flex-column mt-5">
             <main class="inner cover mb-5">
-                <div class="text-center">
+                <div id="intro" class="text-center">
                     <img src="img/me.jpg" id="img-me" alt="Bryan Oliveira" />
                     <h1 class="cover-heading mt-3">Bryan Oliveira</h1>
                     <p class="text-muted">AI Research Scholar | ML Enginner</p>
@@ -61,18 +62,38 @@
                             </svg>
                         </a>
                     </p>
-                    <p class="lead mt-4">
-                        Passionate computer scientist, thrilled by innovation and amazed by the human brain. Working towards artificial general intelligence through deep reinforcement learning
-                        research and machine learning applications. Voracious meta-learner in the free time.
-                    </p>
+                    <div class="text-center">
+                        <!-- Who I am -->
+                        <p class="mt-4">
+                            Hi! I'm Bryan,
+                            <script>
+                                // you didn't see this comming, right?
+                                document.write(new Date().getFullYear() - 1997 + ', ')
+                            </script>
+                            bachelor in Computer Science by Universidade Federal de Goiás (Brazil) and XXXX. Elegant code programmer, eclectic listener, voracious meta-learner and sporadic gamer. I'm
+                            amazed by nature and how the mind works - things I'm forever curious about.
+                        </p>
+                        <!-- What I do -->
+                        <p>
+                            I'm current doing research on the impact of regularization techniques in generalization to out-of-distribution settings for meta reinforcement learning algorithms, as
+                            Research Scholar at
+                            <a href="http://www.deeplearningbrasil.com.br/" target="_blank">Deep Learning Brasil</a>. I'm currently also working as Machine Learning Enginner at
+                            <a href="http://www.datah.ai/" target="_blank">Data-H</a>, training, deploying and maintaining ML models along with software development for data visualization.
+                        </p>
+                        <!-- My objective interests -->
+                        <p>
+                            I'm deeply interested in cognitive neuroscience, artificial intelligence, evolution, quantum mechanics and their interconnections. I also like a broader philosophical
+                            approach to AI research, as I believe it can be used to explain some human behaviors and thought processes. I plan to do a Master's/PhD in this area soon.
+                        </p>
+                    </div>
                 </div>
-                <hr class="ml-5 mr-5 mt-4" />
-                <div id="portfolio" class="mt-4">
+                <hr class="ml-5 mr-5 mt-5" />
+                <div id="portfolio" class="mt-5">
                     <div id="portfolio-nav" class="text-center">
                         <a class="selected" data-type="all" href="#">All</a> | <a href="#" data-type="publication">Publications</a> |
                         <a href="#" data-type="project">Projects</a>
                     </div>
-                    <div class="text-justify">
+                    <div class="mt-4 text-justify">
                         <div class="row item item-publication">
                             <div class="col-md-9">
                                 <h3>
@@ -87,7 +108,7 @@
                                     for deep reinforcement learning agents on sparse-reward robotic manipulator environments.
                                 </p>
                             </div>
-                            <div class="col-md-3 p-0">
+                            <div class="col-md-3">
                                 <img alt="Pick and Place" src="img/pick.gif" />
                             </div>
                         </div>
@@ -105,7 +126,7 @@
                                     Robotics Competition for the Pequi Mecânico UFG - INF's team.
                                 </p>
                             </div>
-                            <div class="col-md-3 p-0">
+                            <div class="col-md-3">
                                 <img alt="VSSS" src="img/vsss.png" />
                             </div>
                         </div>
@@ -123,7 +144,7 @@
                                     guarantee many hours of fun.
                                 </p>
                             </div>
-                            <div class="col-md-3 p-0">
+                            <div class="col-md-3">
                                 <img alt="Die Zombit" src="img/zombit.png" />
                             </div>
                         </div>
@@ -132,8 +153,8 @@
                 <hr class="ml-5 mr-5 mt-5" />
                 <div class="text-center">
                     <small class="text-muted">
-                        Other relevant work can be found at my <a href="https://github.com/bryanoliveira" target="_blank" title="Github">Github</a> and
-                        <a href="https://linkedin.com/in/bryanoliveira/" target="_blank" title="Linkedin">LinkedIn</a> pages.
+                        These are only the most relevant work. Other projects can be found at <a href="https://github.com/bryanoliveira" target="_blank" title="Github">Github</a> and
+                        <a href="https://linkedin.com/in/bryanoliveira/" target="_blank" title="Linkedin">LinkedIn</a>.
                     </small>
                 </div>
             </main>
