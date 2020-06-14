@@ -14,7 +14,6 @@ body {
 }
 a {
     color: #920000;
-    transition: all 0.15s ease-in-out;
 }
 a:hover {
     color: #5f0000;
@@ -73,7 +72,6 @@ a:hover {
     color: #920000;
     padding: 3px 0;
     text-decoration: none;
-    transition: all 0.15s ease-in-out;
 }
 #portfolio a:hover {
     color: #5f0000;
