@@ -63,6 +63,13 @@ a:hover {
 }
 #portfolio h3 {
     font-size: 1.3rem;
+    margin-bottom: 0;
+}
+#portfolio .item small {
+    line-height: 30px;
+}
+#portfolio .item small.text-muted {
+    color: #888 !important;
 }
 #portfolio img {
     width: 100%;
