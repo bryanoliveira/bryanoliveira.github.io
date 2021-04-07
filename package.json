@@ -6,8 +6,8 @@
     "dev": "sapper dev",
     "build": "sapper build",
     "start": "node __sapper__/build",
-    "export": "sapper export --basepath bryanoliveira.github.io --legacy",
-    "deploy": "npm run export && node ./scripts/gh-pages.js"
+    "export": "sapper export --legacy",
+    "deploy": "sapper export --legacy && gh-pages -d __sapper__/export"
   },
   "dependencies": {
     "compression": "^1.7.1",
