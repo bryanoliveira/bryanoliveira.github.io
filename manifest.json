@@ -1,0 +1,16 @@
+{
+	"background_color": "#ffffff",
+	"theme_color": "#ffffff",
+	"name": "Bryan Oliveira",
+	"short_name": "bryan-oliveira",
+	"display": "minimal-ui",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "icon.png",
+			"sizes": "100x100",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}
