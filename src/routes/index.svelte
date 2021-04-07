@@ -11,7 +11,7 @@
             date: 'Mar, 2021',
             type: 'Project',
             tags: ['project', 'parallel', 'cuda', 'opengl'],
-            image: 'img/cellular_automata.gif',
+            image: '/img/cellular_automata.gif',
             description: `A <a href="https://en.wikipedia.org/wiki/Cellular_automaton" 
 					target="_blank">Cellular Automata</a>
                     program built with C++, CUDA and OpenGL. The main objective of
@@ -25,7 +25,7 @@
             date: 'Dec, 2019',
             type: 'Research',
             tags: ['research', 'publication'],
-            image: 'img/pick.gif',
+            image: '/img/pick.gif',
             description: `Intrinsic motivation for robotic manipulation learning with
                     sparse rewards - Study of the impact of curiosity and
                     intrinsic motivation as an exploration strategy for deep
@@ -38,7 +38,7 @@
             date: 'Nov, 2019',
             type: 'Deep Learning',
             tags: ['project', 'ai', 'deeplearning'],
-            image: 'img/bone.png',
+            image: '/img/bone.png',
             description: `My code for the I2A2 Bone Age Regression competition. I
                     learned a lot building this pipeline from scratch and was
                     able to experiment with different model architectures and
@@ -52,7 +52,7 @@
             date: 'Jan, 2019',
             type: 'Game',
             tags: ['project', 'ai', 'deeplearning'],
-            image: 'img/quack.png',
+            image: '/img/quack.png',
             description: `Quack is a Unity3D game made for the Global Game Jam 2019
                     with theme "What home means to you?". The game consists in a
                     happy chicken that wants to build a new home for it's
@@ -67,7 +67,7 @@
             date: 'Dec, 2018',
             type: 'Rendering',
             tags: ['project', 'rendering', 'simulation'],
-            image: 'img/rigidbody_physics.gif',
+            image: '/img/rigidbody_physics.gif',
             description: `3D Rigid Body Physics simulator using only Processing's
                     point() and line() functions. Uses Digital Differential
                     Analyzer (DDA) to render lines between two points, Scan Line
@@ -80,7 +80,7 @@
             date: 'Oct, 2018',
             type: 'Robotics',
             tags: ['project', 'robotics', 'leadership'],
-            image: 'img/vsss.png',
+            image: '/img/vsss.png',
             description: `A stack consisting of image processing, computer vision,
                     team coordination, navigation, control and communication
                     softwares to compete in the 2018's Latin-American Robotics
@@ -92,7 +92,7 @@
             date: 'Jun, 2015',
             type: 'Game',
             tags: ['project', 'game', 'indie'],
-            image: 'img/zombit.png',
+            image: '/img/zombit.png',
             description: `Reviving the classics of the 80's and 90's, Die Zombit is a
                     retrowave top-down shooting game that has a striking
                     soundtrack and an addictive gameplay which guarantee many
