@@ -1,5 +1,6 @@
-# sapper-template
+# My Personal Website
 
+Made with Svelte.
 The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Can use either Rollup or webpack as bundler.
 
 
