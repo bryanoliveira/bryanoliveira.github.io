@@ -17,14 +17,15 @@ The main objective of this project is to allow scaling up to a fairly large numb
 This program can currently evolve a dense & high entropy 144 million cell Conway's Game of Life grid (12000x12000) with rendering enabled with up to 15 FPS on a Ryzen 7 3700X / RTX 3080 using up to 2GB RAM and 9GB VRAM (which is the actual scaling limiter).
 
 <a href="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/12000x12000.png" target="_blank">
-<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/12000x12000.png" style="width:100%">
+    <img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/12000x12000.png" style="width:100%">
 </a>
 
 > A 12000x12000 grid running Conway's Game of life.
 
 <a href="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/1000x1000.gif" target="_blank">
-<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/1000x1000.gif" style="width:100%">
+    <img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/1000x1000.gif" style="width:100%">
 </a>
+
 > A 1000x1000 grid running Conway's Game of life.
 
 ---
