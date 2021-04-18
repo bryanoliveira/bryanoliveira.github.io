@@ -39,7 +39,7 @@
                 {/each}
             </div>
             <p>{@html post.description}</p>
-            <div class="mt-4 mb-2 text-muted author">
+            <div class="mt-4 mb-4 text-muted author">
                 <a href="/" class="no-decoration">
                     <img src="/img/me.jpg" id="img-me" alt="Bryan Oliveira" />
                     <h2>Bryan Oliveira</h2>
