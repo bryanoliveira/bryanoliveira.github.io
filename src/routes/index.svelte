@@ -12,12 +12,16 @@
             .then((posts) => {
                 return { posts }
             })
+            .catch((e) => {
+                console.error(e)
+            })
     }
 </script>
 
 <script>
     export let posts // get from server side
     import HeadlineVertical from '../components/HeadlineVertical.svelte'
+    import PostListItem from '../components/PostListItem.svelte'
 
     const tab_all = 'all'
     const tab_publication = 'publication'
@@ -29,10 +33,10 @@
     <title>Bryan Oliveira</title>
 </svelte:head>
 
-<div id="intro" class="text-center">
+<div class="text-center">
     <HeadlineVertical />
 
-    <div class="text-center indicate_blank">
+    <div id="intro" class="text-center indicate_blank">
         <!-- Who I am -->
         <p class="mt-4">
             Hi! I'm Bryan,
@@ -109,37 +113,10 @@
             </li>
         </ul>
     </div>
-    <div class="mt-4 text-justify">
+    <div class="mt-4 pt-3 text-justify">
         {#each posts as post}
             {#if active_tab == tab_all || post.tags.includes(active_tab)}
-                <div class="row item">
-                    <div class="col-md-8">
-                        <h3>
-                            <a href="blog/{post.slug}">
-                                {post.title}
-                            </a>
-                        </h3>
-                        <small class="text-muted">
-                            {post.type} · {new Date(
-                                post.date
-                            ).toLocaleDateString('en-US', {
-                                year: 'numeric',
-                                month: 'long',
-                            })}
-                        </small>
-                        <p class="item-description indicate_blank">
-                            {@html post.description}
-                            <a href="blog/{post.slug}" target="_blank">
-                                Read more
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="blog/{post.slug}">
-                            <img alt={post.title} src={post.image} />
-                        </a>
-                    </div>
-                </div>
+                <PostListItem {post} />
             {/if}
         {/each}
     </div>
@@ -164,31 +141,6 @@
 <style>
     #intro p {
         font-size: 1.2rem;
-    }
-
-    #portfolio h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0;
-    }
-    #portfolio a {
-        padding: 3px 0;
-    }
-    .indicate_blank a[target='_blank']::after {
-        content: '\29C9' !important;
-        margin: 0 3px 0 5px;
-    }
-    #portfolio .item small {
-        line-height: 30px;
-    }
-    #portfolio .item small.text-muted {
-        color: #888 !important;
-    }
-    #portfolio img {
-        width: 100%;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-    #portfolio .row {
-        margin-top: 2rem;
     }
 
     #portfolio-nav {

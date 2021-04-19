@@ -4,7 +4,6 @@
 
 <img src="/img/me.jpg" id="img-me" alt="Bryan Oliveira" />
 <h1 class="cover-heading mt-3">Bryan Oliveira</h1>
-<p class="text-muted">Machine Learning Engineer</p>
 <div>
     <SubLinks />
 </div>
