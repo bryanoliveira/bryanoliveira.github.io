@@ -18,7 +18,7 @@
     <title>Blog</title>
 </svelte:head>
 
-<a href="." class="back" rel="prefetch">« home</a>
+<a href="/" class="back" rel="prefetch">« home</a>
 <div class="mt-5 mb-5 pb-3 text-center">
     <h1 class="mt-2">Blog</h1>
 </div>
