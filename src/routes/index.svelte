@@ -31,6 +31,21 @@
 
 <svelte:head>
     <title>Bryan Oliveira</title>
+
+    <!--  Include canonical links to your blog -->
+    <link rel="canonical" href="https://bryanoliveira.github.io" />
+    <meta property="og:url" content="https://bryanoliveira.github.io" />
+    <meta property="og:title" content="Bryan Oliveira" />
+    <meta
+        property="og:description"
+        content="Hi! I'm Bryan and this is my personal website."
+    />
+    <meta
+        name="description"
+        content="Hi! I'm Bryan and this is my personal website."
+    />
+    <!--  Link to your preferred image  -->
+    <!-- <meta property="og:image" content={post.image} /> -->
 </svelte:head>
 
 <div class="text-center">
@@ -80,7 +95,7 @@
 
 <div id="portfolio" class="mt-5 pt-4">
     <div id="portfolio-nav" class="text-center">
-        <ul class="nav nav-tabs nav-fill">
+        <ul class="nav nav-tabs nav-fill no-underline">
             <li class="nav-item">
                 <a
                     class="nav-link"
@@ -122,7 +137,7 @@
     </div>
 </div>
 <hr class="ml-5 mr-5 mt-5" />
-<div class="text-center indicate_blank">
+<footer class="text-center indicate_blank">
     <small class="text-muted">
         This is a few of my most relevant work. Other projects can be found at <a
             href="https://github.com/bryanoliveira"
@@ -135,8 +150,10 @@
             target="_blank"
             title="Linkedin">LinkedIn</a
         >.
+        <br />
+        You can also check out my <a href="/blog" rel="prefetch">blog</a>.
     </small>
-</div>
+</footer>
 
 <style>
     #intro p {

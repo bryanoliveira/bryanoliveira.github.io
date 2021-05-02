@@ -41,10 +41,6 @@
     .post-item a {
         padding: 3px 0;
     }
-    .indicate_blank a[target='_blank']::after {
-        content: '\29C9' !important;
-        margin: 0 3px 0 5px;
-    }
     .post-item .post-item small {
         line-height: 30px;
     }

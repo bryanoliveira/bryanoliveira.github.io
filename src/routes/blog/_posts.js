@@ -4,7 +4,7 @@ const fs = require("fs");
 const fm = require("front-matter");
 const marked = require("marked");
 const hljs = require("highlight.js");
-
+const readingTime = require('reading-time');
 const files = fs.readdirSync("posts");
 
 // Use highlight.js as the highlighter for the marked library
@@ -21,8 +21,9 @@ for (let i = 0; i < files.length; i++) {
   const { body, ...frontMatter } = fm(content);
   // Use the marked library to turn markdown into html
   const html = marked(body);
-  posts.push({ html, ...frontMatter.attributes });
-  posts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+  const readingStats = readingTime(body);
+  posts.push({ html, readingTime: readingStats.text, ...frontMatter.attributes });
 }
+posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 export default posts;

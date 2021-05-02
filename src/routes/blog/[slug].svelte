@@ -7,7 +7,7 @@
         const data = await res.json()
 
         if (res.status === 200) {
-            return { post: data }
+            return { post: data, slug: params.slug }
         } else {
             this.error(res.status, data.message)
         }
@@ -16,71 +16,104 @@
 
 <script>
     // frontend
+    import HorizontalNamePhoto from '../../components/HorizontalNamePhoto.svelte'
     export let post
+    export let slug
 </script>
 
 <svelte:head>
     <title>{post.title}</title>
+
+    <!--  Include canonical links to your blog -->
+    <link rel="canonical" href="https://bryanoliveira.github.io/blog/{slug}" />
+
+    <!-- Validate your twitter card with https://cards-dev.twitter.com/validator  -->
+    <!-- Update content properties with your URL   -->
+    <!-- 	<meta property="og:url" content=""} /> -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={post.title} />
+    <meta name="Description" content={post.description} />
+    <meta property="og:description" content={post.description} />
+
+    <!--  Link to your preferred image  -->
+    <meta property="og:image" content={post.image} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Link to your Domain  -->
+    <meta name="twitter:domain" value="bryanoliveira.github.io" />
+
+    <!--  Link to your Twitter Account  -->
+    <meta name="twitter:creator" value="bryanoliveira_" />
+
+    <meta name="twitter:title" value={post.title} />
+    <meta name="twitter:description" content={post.description} />
+
+    <!--  Link to your preferred image to be displayed on Twitter (832x520px) -->
+    <meta name="twitter:image" content={post.image} />
+
+    <meta name="twitter:label1" value="Published on" />
+    <meta
+        name="twitter:data1"
+        value={new Date(post.date).toLocaleDateString(undefined, {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+        })}
+    />
+    <meta name="twitter:label2" value="Reading Time" />
+    <meta name="twitter:data2" value={post.readingTime} />
 </svelte:head>
 
-<div class="content">
-    <div class="row">
-        <div class="col-md-8">
-            <h1>{post.title}</h1>
-            <div class="mb-3">
-                {#each post.urls as url}
-                    <a
-                        href={url.url}
-                        class="btn btn-sm btn-secondary mr-1"
-                        target="_blank"
-                    >
-                        {url.cta} ⧉
-                    </a>
-                {/each}
-            </div>
-            <p>{@html post.description}</p>
-            <div class="mt-4 mb-4 text-muted author">
-                <a href="/" class="no-decoration">
-                    <img src="/img/me.jpg" id="img-me" alt="Bryan Oliveira" />
-                    <h2>Bryan Oliveira</h2>
-                </a>
-                · {post.type} ·
-                <span title={new Date(post.date).toLocaleDateString()}>
-                    {new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                    })}
-                </span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <img src={post.image} alt={post.title} class="cover" />
-        </div>
-    </div>
-    <hr />
-    <div class="post">
-        {@html post.html}
+<a href="/blog" class="back">« posts</a>
+<div class="mt-5 mb-5 text-center">
+    <h1>{post.title}</h1>
+    <div class="mt-4 text-muted">
+        {post.type} ·
+        <span title={new Date(post.date).toLocaleDateString()}>
+            {new Date(post.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+            })}
+        </span>
+        · {post.readingTime}
     </div>
 </div>
+<div class="row">
+    <div class="col-md-8">
+        <p>{@html post.description}</p>
+        <div class="mb-3">
+            {#each post.urls as url}
+                <a
+                    href={url.url}
+                    class="btn btn-sm btn-secondary mr-1 no-underline"
+                    target="_blank"
+                >
+                    {url.cta} ⧉
+                </a>
+            {/each}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <img src={post.image} alt={post.title} class="cover" />
+    </div>
+</div>
+<hr />
+<div class="post">
+    {@html post.html}
+</div>
+<hr />
+<footer class="text-center indicate_blank">
+    <HorizontalNamePhoto />
+</footer>
 
 <style>
-    .author {
-        font-size: 0.8rem;
-    }
-    h2 {
-        font-size: 0.8rem;
-        display: inline;
-        margin-left: 5px;
-    }
-    #img-me {
-        width: 25px;
-        height: 25px;
-        margin-top: -3px;
-        border-radius: 100%;
-        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-    }
-    a.no-decoration {
-        border: none;
+    h1 {
+        font-family: Merriweather, serif;
+        font-size: 4em;
+        margin: 0 0 0.3em 0;
+        font-weight: 700;
+        line-height: 1.2;
     }
 
     .cover {
