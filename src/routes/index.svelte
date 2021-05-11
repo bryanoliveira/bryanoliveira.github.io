@@ -78,7 +78,7 @@
             >. I'm also working as Machine Learning Operations (MLOps) Engineer
             at
             <a href="http://www.datah.ai/" target="_blank">Data-H</a>,
-            developing automated pipelines for data processing and training,
+            developing automated pipelines for data processing, training,
             evaluating, deploying and monitoring of ML models.
         </p>
         <!-- My objective interests -->
