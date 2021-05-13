@@ -54,15 +54,11 @@
     <div id="intro" class="text-center indicate_blank">
         <!-- Who I am -->
         <p class="mt-4">
-            Hi! I'm Bryan,
-            <script>
-                // you didn't see this comming, right?
-                document.write(new Date().getFullYear() - 1997 + ', ')
-            </script>
-            bachelor in Computer Science by Universidade Federal de Goiás (Brazil).
-            Elegant code writer, eclectic listener, voracious meta-learner and sporadic
-            gamer. I'm amazed by nature and how the mind works - things I'm forever
-            curious about.
+            Hi, I'm Bryan! I'm {new Date().getFullYear() - 1997 + ', '}
+            B.S. in Computer Science by Universidade Federal de Goiás (Brazil). Elegant
+            code writer, eclectic listener, voracious meta-learner and sporadic gamer.
+            I'm amazed by nature and how the mind works - things I'm forever curious
+            about.
         </p>
         <!-- What I do -->
         <p>
