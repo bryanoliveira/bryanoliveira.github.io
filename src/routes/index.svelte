@@ -20,12 +20,17 @@
 
 <script>
     export let posts // get from server side
-    import HeadlineVertical from '../components/HeadlineVertical.svelte'
+    import SubLinks from '../components/SubLinks.svelte'
     import PostListItem from '../components/PostListItem.svelte'
 
     const tab_all = 'all'
     const tab_publication = 'publication'
     const tab_projects = 'project'
+    const tabs = {
+        all: 'All',
+        publication: 'Publications',
+        project: 'Projects',
+    }
     let active_tab = tab_all
 </script>
 
@@ -49,11 +54,21 @@
 </svelte:head>
 
 <div class="text-center">
-    <HeadlineVertical />
+    <!-- <img src="/img/me.jpg" id="img-me" alt="Bryan Oliveira" width="100px" /> -->
+    <h1 class="cover-heading mt-5">Bryan Oliveira</h1>
+    <div class="mb-4">
+        <SubLinks />
+    </div>
 
-    <div id="intro" class="text-center indicate_blank">
+    <div id="intro" class="text-justify indicate_blank">
         <!-- Who I am -->
         <p class="mt-4">
+            <img
+                src="/img/me.jpg"
+                id="img-me"
+                alt="Bryan Oliveira"
+                align="left"
+            />
             Hi, I'm Bryan! I'm {new Date().getFullYear() - 1997 + ', '}
             B.S. in Computer Science by Universidade Federal de Goiás (Brazil). Elegant
             code writer, eclectic listener, voracious meta-learner and sporadic gamer.
@@ -152,6 +167,17 @@
 </footer>
 
 <style>
+    #img-me {
+        /* margin-top: -40px;
+        margin-right: 30px; */
+
+        width: 140px;
+        height: 140px;
+        margin: 0 20px 0 0;
+        border-radius: 10%;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    }
+
     #intro p {
         font-size: 1.2rem;
     }

@@ -32,13 +32,3 @@
 <footer class="text-center indicate_blank">
     <HorizontalNamePhoto />
 </footer>
-
-<style>
-    h1 {
-        font-family: Merriweather, serif;
-        font-size: 4em;
-        margin: 0 0 0.3em 0;
-        font-weight: 700;
-        line-height: 1.2;
-    }
-</style>

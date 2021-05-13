@@ -108,14 +108,6 @@
 </footer>
 
 <style>
-    h1 {
-        font-family: Merriweather, serif;
-        font-size: 4em;
-        margin: 0 0 0.3em 0;
-        font-weight: 700;
-        line-height: 1.2;
-    }
-
     .cover {
         width: 100%;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
