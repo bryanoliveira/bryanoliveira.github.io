@@ -5,7 +5,7 @@ date: '2021-03-10'
 urls:
     [{ cta: 'Code', url: 'https://github.com/bryanoliveira/cellular-automata' }]
 type: 'Project'
-tags: ['project', 'parallel', 'cuda', 'opengl']
+tags: ['project', 'parallel', 'cuda', 'opengl', 'game']
 image: '/img/cellular_automata.gif'
 description: 'A <a href="https://en.wikipedia.org/wiki/Cellular_automaton" target="_blank">Cellular Automata</a> program built with C++, CUDA and OpenGL. The main objective of this project is to allow scaling up to a fairly large number of cells while maintaining the code legibility and allowing for further customizations.'
 ---

@@ -23,14 +23,12 @@
     import SubLinks from '../components/SubLinks.svelte'
     import PostListItem from '../components/PostListItem.svelte'
 
-    const tab_all = 'all'
-    const tab_publication = 'publication'
-    const tab_projects = 'project'
     const tabs = {
         all: 'All',
-        publication: 'Publications',
-        project: 'Projects',
+        game: 'Games',
+        research: 'Research',
     }
+    const tab_all = 'all'
     let active_tab = tab_all
 </script>
 
@@ -107,36 +105,18 @@
 <div id="portfolio" class="mt-5 pt-4">
     <div id="portfolio-nav" class="text-center">
         <ul class="nav nav-tabs nav-fill no-underline">
-            <li class="nav-item">
-                <a
-                    class="nav-link"
-                    class:active={active_tab == tab_all}
-                    href="#portfolio"
-                    on:click={() => (active_tab = tab_all)}
-                >
-                    All
-                </a>
-            </li>
-            <li class="nav-item">
-                <a
-                    class="nav-link"
-                    class:active={active_tab == tab_publication}
-                    href="#portfolio"
-                    on:click={() => (active_tab = tab_publication)}
-                >
-                    Publications
-                </a>
-            </li>
-            <li class="nav-item">
-                <a
-                    class="nav-link"
-                    class:active={active_tab == tab_projects}
-                    href="#portfolio"
-                    on:click={() => (active_tab = tab_projects)}
-                >
-                    Projects
-                </a>
-            </li>
+            {#each Object.keys(tabs) as tab}
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        class:active={active_tab == tab}
+                        href="#portfolio"
+                        on:click={() => (active_tab = tab)}
+                    >
+                        {tabs[tab]}
+                    </a>
+                </li>
+            {/each}
         </ul>
     </div>
     <div class="mt-4 pt-3 text-justify">
