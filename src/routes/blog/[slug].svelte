@@ -65,7 +65,7 @@
     <meta name="twitter:data2" value={post.readingTime} />
 </svelte:head>
 
-<a href="/blog" class="back">« posts</a>
+<a href="/blog" class="back" rel="prefetch">« posts</a>
 <div class="mt-5 mb-5 text-center">
     <h1>{post.title}</h1>
     <div class="mt-4 text-muted">
