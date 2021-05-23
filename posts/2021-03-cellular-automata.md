@@ -3,7 +3,16 @@ title: 'Cellular Automata Framework'
 slug: '2021-03-10-cellular-automata'
 date: '2021-03-10'
 urls:
-    [{ cta: 'Code', url: 'https://github.com/bryanoliveira/cellular-automata' }]
+    [
+        {
+            cta: 'Code',
+            url: 'https://github.com/bryanoliveira/cellular-automata',
+        },
+        {
+            cta: 'Executable',
+            url: 'https://github.com/bryanoliveira/cellular-automata/releases',
+        },
+    ]
 type: 'Project'
 tags: ['project', 'parallel', 'cuda', 'opengl', 'game']
 image: 'https://github.com/bryanoliveira/cellular-automata/raw/master/docs/100x100.gif'
@@ -21,15 +30,12 @@ The ability to evolve and render such large grids allows the program to run some
 <div align="center">
 <img src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/zoom.gif">
 </div>
-<br/>
 
 In the GIF above we're running a 12300x12300 grid using Game of Life rules to evolve a pattern known as [Meta-Toad](http://b3s23life.blogspot.com/2006_09_01_archive.html). It uses a grid of [OTCA Metapixels](https://www.conwaylife.com/wiki/OTCA_metapixel) and requires about 35 thousand generations of the underlying automaton to represent a single generation of the meta-grid. The pattern being evolved by the meta-grid is known as [Toad](https://www.conwaylife.com/wiki/Toad):
 
 <div align="center">
 <img src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/toad.gif" align="center" width="100">
 </div>
-
-<br />
 
 ## Requirements
 

@@ -6,6 +6,10 @@ urls:
     [
         { cta: 'Code', url: 'https://github.com/bryanoliveira/PY-VSSS-INF' },
         {
+            cta: 'Simulator Demo',
+            url: 'https://www.youtube.com/watch?v=JQVrX5h7u_8',
+        },
+        {
             cta: 'Team Description Paper',
             url: 'https://github.com/bryanoliveira/PY-VSSS-INF/blob/master/docs/TDP%20VSSS%20INF%202018.pdf',
         },

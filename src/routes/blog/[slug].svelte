@@ -121,6 +121,14 @@
 		all elements inside .content
 	*/
 
+    .post :global(h2) {
+        margin-top: 30px;
+    }
+    .post :global(h3) {
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+
     .post :global(pre) {
         background-color: #f9f9f9;
         box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
@@ -140,5 +148,9 @@
 
     .post :global(li) {
         margin: 0 0 0.5em 0;
+    }
+
+    .post :global(img) {
+        margin: 10px 0 20px 0;
     }
 </style>
