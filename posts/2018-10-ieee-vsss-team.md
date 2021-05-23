@@ -16,13 +16,25 @@ image: '/img/vsss.png'
 description: "A stack consisting of image processing, computer vision, team coordination, navigation, control and communication software to compete in the 2018's Latin-American Robotics Competition for the Pequi Mecânico UFG - INF's team."
 ---
 
-Hi! This is the development repo of [Pequi Mecânico](https://www.facebook.com/NucleoPMec/) - INF's **Very Small Size Soccer Team**. Our team comprises several courses (Electrical Engineering, Computer Engineering, Software Engineering and Computer Science), all from Federal University of Goiás - [UFG](https://www.ufg.br/) - Goiânia.
-
-Our repository is open because we understand that our greatest job is to add our research and knowledge to the academic and industrial world.
+Hi! This is the development repo of [Pequi Mecânico](https://www.facebook.com/NucleoPMec/) - INF's **Very Small Size Soccer Team**. Our team comprises several courses (Electrical Engineering, Computer Engineering, Software Engineering and Computer Science), all from Federal University of Goiás - [UFG](https://www.ufg.br/) - Goiânia. Our repository is open because we understand that our greatest job is to add our research and knowledge to the academic and industrial world.
 
 You can find our Team Description Paper [here](https://github.com/bryanoliveira/PY-VSSS-INF/blob/master/docs/TDP%20VSSS%20INF%202018.pdf). We are open to answer any questions and suggestions through our email pequimecanicoufg@gmail.com.
 
-## How to use
+## Features
+
+-   Isolated modules for vision, strategy, control, communication, and interface
+-   High-fidelity simulator made with MuJoCo
+-   Qt interface
+
+<div align="center">
+<a href="https://www.youtube.com/watch?v=JQVrX5h7u_8">
+<img src="https://github.com/bryanoliveira/PY-VSSS-INF/raw/master/docs/images/Simulator.gif" width="550"/>
+</a>
+</div>
+
+> Our simulator running two instances of the same control system. Green arrows indicate the robot's movement direction (given by the vector field), and blue, yellow, and red arrows indicate goalie, defender and attacker's targets.
+
+## Usage
 
 ### Dependencies
 
@@ -41,6 +53,12 @@ To open the GUI we use on our competitions, run:
 To open our simulator, run:
 
 `python aether.py`
+
+<div align="center">
+<a href="https://www.youtube.com/watch?v=UBV4qlAJ-sc">
+<img src="https://github.com/bryanoliveira/PY-VSSS-INF/raw/master/docs/images/Kick.gif" width="600"/>
+</a>
+</div>
 
 ## Social networks
 
