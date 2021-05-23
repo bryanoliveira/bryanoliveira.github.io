@@ -6,27 +6,97 @@ urls:
     [{ cta: 'Code', url: 'https://github.com/bryanoliveira/cellular-automata' }]
 type: 'Project'
 tags: ['project', 'parallel', 'cuda', 'opengl', 'game']
-image: '/img/cellular_automata.gif'
-description: 'A <a href="https://en.wikipedia.org/wiki/Cellular_automaton" target="_blank">Cellular Automata</a> program built with C++, CUDA and OpenGL. The main objective of this project is to allow scaling up to a fairly large number of cells while maintaining the code legibility and allowing for further customizations.'
+image: 'https://github.com/bryanoliveira/cellular-automata/raw/master/docs/100x100.gif'
+description: 'A <a href="https://en.wikipedia.org/wiki/Cellular_automaton" target="_blank">Cellular Automata</a> program built with C++, CUDA and OpenGL. The main objective of this project is to allow scaling up to a reasonably large number of cells while maintaining the code legibility and allowing for further customizations.'
 ---
 
-A [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton) program built with C++, CUDA and OpenGL. It's built to run on a GPU but it also supports CPU-only execution (mainly for relative speedup comparisons).
+A [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton) program built with C++, CUDA and OpenGL. It's built to run on a GPU but it also supports CPU-only execution (mainly for relative speedup comparisons). On the right there's an example execution of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) on a 100x100 randomly initialized grid.
 
-The main objective of this project is to allow scaling up to a fairly large number of cells while maintaining the code legibility and allowing for further customizations. It supports command line arguments to set up quick configs (run `./automata -h` for details) like headless mode (which is significantly faster) and initial patterns (which can be loaded from the `patterns` folder). It doesn't yet support the definition of evolution rules at runtime, but I'm working on that.
+The main objective of this project is to allow scaling up to a reasonably large number of cells while maintaining the code legibility and allowing for further customizations. It supports command line arguments to set up quick configs (run `./automata -h` for details) like headless mode (which is significantly faster) and initial patterns (which can be loaded from the `patterns` folder). It doesn't yet support the definition of evolution rules at runtime or lattice size inference, but I'm working on that.
 
-This program can currently evolve a dense & high entropy 144 million cell Conway's Game of Life grid (12000x12000) with rendering enabled with up to 15 FPS on a Ryzen 7 3700X / RTX 3080 using up to 2GB RAM and 9GB VRAM (which is the actual scaling limiter).
+This program can currently evolve a dense & high entropy 182.25 million cell Game of Life grid (13500x13500) with rendering enabled with up to 320 generations per second on a Ryzen 7 3700X / RTX 3080 using up to 200MB RAM and 8.5GB VRAM (which is the actual scaling limiter).
 
-<a href="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/12000x12000.png" target="_blank">
-    <img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/12000x12000.png" style="width:100%">
-</a>
+The ability to evolve and render such large grids allows the program to run some really interesting patterns, like evolving the Game of Life _within_ the Game of Life:
 
-> A 12000x12000 grid running Conway's Game of life.
+<div align="center">
+<img src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/zoom.gif">
+</div>
+<br/>
 
-<a href="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/1000x1000.gif" target="_blank">
-    <img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/1000x1000.gif" style="width:100%">
-</a>
+In the GIF above we're running a 12300x12300 grid using Game of Life rules to evolve a pattern known as [Meta-Toad](http://b3s23life.blogspot.com/2006_09_01_archive.html). It uses a grid of [OTCA Metapixels](https://www.conwaylife.com/wiki/OTCA_metapixel) and requires about 35 thousand generations of the underlying automaton to represent a single generation of the meta-grid. The pattern being evolved by the meta-grid is known as [Toad](https://www.conwaylife.com/wiki/Toad):
 
-> A 1000x1000 grid running Conway's Game of life.
+<div align="center">
+<img src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/toad.gif" align="center" width="100">
+</div>
+
+<br />
+
+## Requirements
+
+To run the program you'll need:
+
+-   Debian-like linux distro (I only tested this on Ubuntu 20)
+-   OpenGL (GLEW and GLUT)
+    -   e.g. `sudo apt-get install libglew2.1 freeglut3-dev`
+-   [CUDA](https://developer.nvidia.com/cuda-downloads) (nvcc) and CUDA runtime libraries
+
+To build it from source you'll also need:
+
+-   g++ (C++ 17) and _make_
+    -   e.g. `sudo apt install build-essential`
+-   Boost C++ Library (program_options module)
+
+It is possible to run this program in a CPU-only mode, so if you don't have a CUDA-capable video card you may skip the last step. For that to work you will need to run the program with `./automata --cpu` and disable `*.cu` file compilation in the `Makefile`.
+
+## Usage
+
+### Executing a pre-built binary (Linux x64 + CUDA only)
+
+-   Download `cellular-automata-linux64.zip` from the [latest release](https://github.com/bryanoliveira/cellular-automata/releases)
+-   Extract the executable (`automata`) and the `patterns` folder
+-   Install OpenGL and CUDA from the requirements above
+-   Run `./automata -h` to see all the available options
+-   Run the program with `./automata --render`.
+
+If your GPU has enough VRAM (>= 8 GB), you may be able to reproduce the Meta-Toad simulation above. Run `./automata -r -x 12300 -y 12300 -p 0 -f patterns/meta-toad.rle` to try it out!
+
+### Building From Source
+
+-   Install the requirements
+-   Clone this repository
+-   Building and executing:
+    -   Run `make` to build and run
+    -   Run `make build` to build
+    -   Run `make run` to run with default parameters
+    -   Run `make clean` to remove generated files
+    -   Run `make profile` to run [NVIDIA's nsys](https://developer.nvidia.com/nsight-systems) profiling.
+
+### Runtime Controls
+
+-   Basic controls:
+    -   **space** pauses/resumes the simulation;
+    -   **enter/return** runs a single generation;
+    -   **left mouse click** translates the grid relative to the max resolution
+    -   **ctrl + left mouse click** translates the camera relative to the world
+    -   **mouse scroll** zooms the grid in and out, relative to the max resolution
+    -   **ctrl + mouse scroll** zooms the camera, relative to the world
+    -   **middle mouse click** resets scale and translation
+
+## References
+
+-   What are [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton)?
+-   What is [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)?
+-   [Golly](http://golly.sourceforge.net/): an open source cellular automata simulator that supports several Game of Life and other automata algorithms;
+-   [Life](https://copy.sh/life/): an open source JavaScript implementation of Game of Life that runs in the browser;
+-   [Conway's Life: Work in Progress](http://b3s23life.blogspot.com/2006_09_01_archive.html): where I got the initial pattern for the Meta-Toad;
+-   [The Recursive Universe](https://blog.amandaghassaei.com/2020/05/01/the-recursive-universe/): explores and explains how some of the meta-patterns work;
+-   What are [OTCA Metapixels](https://www.conwaylife.com/wiki/OTCA_metapixel)?
+
+## Bonus
+
+![1000x1000 grid (click to open)](https://github.com/bryanoliveira/cellular-automata/raw/master/docs/1000x1000.gif)
+
+> A 1000x1000 randomly initialized grid running Game of life.
 
 ---
 
