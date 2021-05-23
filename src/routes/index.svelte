@@ -130,7 +130,7 @@
 <hr class="ml-5 mr-5 mt-5" />
 <footer class="text-center indicate_blank">
     <small class="text-muted">
-        This is a few of my most relevant work. Other projects can be found at <a
+        These are a few of my most relevant work. Other projects can be found on <a
             href="https://github.com/bryanoliveira"
             target="_blank"
             title="Github">Github</a
