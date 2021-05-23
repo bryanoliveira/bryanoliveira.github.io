@@ -67,11 +67,11 @@
                 alt="Bryan Oliveira"
                 align="left"
             />
-            Hi, I'm Bryan! I'm {new Date().getFullYear() - 1997 + ', '}
-            B.S. in Computer Science by Universidade Federal de Goiás (Brazil). Elegant
-            code writer, eclectic listener, voracious meta-learner and sporadic gamer.
-            I'm amazed by nature and how the mind works - things I'm forever curious
-            about.
+            Hi! I'm Bryan, {new Date().getFullYear() - 1997}, B.S. in Computer
+            Science by Universidade Federal de Goiás (Brazil). Elegant code
+            writer, eclectic listener, voracious meta-learner and sporadic
+            gamer. I'm amazed by nature and how the mind works - things I'm
+            forever curious about.
         </p>
         <!-- What I do -->
         <p>
@@ -88,16 +88,16 @@
             at
             <a href="http://www.datah.ai/" target="_blank">Data-H</a>,
             developing automated pipelines for data processing, training,
-            evaluating, deploying and monitoring of ML models.
+            evaluating, deploying, and monitoring ML models.
         </p>
         <!-- My objective interests -->
         <p>
-            I'm deeply interested in cognitive neuroscience, artificial
-            intelligence, evolution, quantum mechanics and their
-            interconnections. I also like a broader philosophical approach to AI
-            research, as I believe it can be used to explain numerous human
-            behaviors and thought processes. I plan to do a Master's / PhD in
-            this area soon.
+            I'm deeply interested in high-performance computing, artificial
+            intelligence, cognitive neuroscience, evolution, quantum mechanics
+            and their interconnections. I also like a broader philosophical
+            approach to AI research, as I believe it can be used to explain
+            numerous human behaviors and thought processes. I plan to do a
+            Master's / PhD in this area soon.
         </p>
     </div>
 </div>
