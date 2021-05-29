@@ -2,9 +2,9 @@
     export let post
 </script>
 
-<div class="row post-item mb-3">
+<div class="row post-item mb-5">
     <div class="col-md-8">
-        <h3>
+        <h3 class="text-left">
             <!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
@@ -26,7 +26,7 @@
             </a>
         </p>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 text-center">
         <a rel="prefetch" href="blog/{post.slug}">
             <img alt={post.title} src={post.image} />
         </a>

@@ -18,7 +18,7 @@ description: "3D Rigid Body Physics simulator using only Processing's point() an
 3D Rigid Body Physics simulator using only [Processing](https://processing.org/)'s point() and line() functions. Uses Digital Differential Analyzer (DDA) to render lines between two points, Scan Line to render polygons, normal calculation to determine faces to render in 3D space and Newtonian physics. Written in Java.
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/bryanlincoln/cg-processing-simulator/master/Demo.gif" width="600"/>
+    <img class="text-img mw-100" src="https://raw.githubusercontent.com/bryanlincoln/cg-processing-simulator/master/Demo.gif"/>
 </div>
 
 > One of the project's scenes, where one cube is affected by gravity (red) and the other is not (blue).

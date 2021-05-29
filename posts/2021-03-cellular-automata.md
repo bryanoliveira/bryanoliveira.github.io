@@ -28,13 +28,13 @@ This program can currently evolve a dense & high entropy 182.25 million cell Gam
 The ability to evolve and render such large grids allows the program to run some really interesting patterns, like evolving the Game of Life _within_ the Game of Life:
 
 <div align="center">
-<img src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/zoom.gif">
+    <img class="text-img mw-75" src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/zoom.gif">
 </div>
 
 In the GIF above we're running a 12300x12300 grid using Game of Life rules to evolve a pattern known as [Meta-Toad](http://b3s23life.blogspot.com/2006_09_01_archive.html). It uses a grid of [OTCA Metapixels](https://www.conwaylife.com/wiki/OTCA_metapixel) and requires about 35 thousand generations of the underlying automaton to represent a single generation of the meta-grid. The pattern being evolved by the meta-grid is known as [Toad](https://www.conwaylife.com/wiki/Toad):
 
 <div align="center">
-<img src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/toad.gif" align="center" width="100">
+    <img class="text-img" src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/toad.gif" width="150">
 </div>
 
 ## Requirements
@@ -100,7 +100,9 @@ If your GPU has enough VRAM (>= 8 GB), you may be able to reproduce the Meta-Toa
 
 ## Bonus
 
-![1000x1000 grid (click to open)](https://github.com/bryanoliveira/cellular-automata/raw/master/docs/1000x1000.gif)
+<div align="center">
+<img class="text-img mw-100" src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/1000x1000.gif"/>
+</div>
 
 > A 1000x1000 randomly initialized grid running Game of life.
 

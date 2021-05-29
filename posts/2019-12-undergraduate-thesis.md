@@ -23,7 +23,11 @@ As my undergraduate thesis, I studied the impact of curiosity and intrinsic moti
 
 To read the full report, [click here](https://github.com/bryanlincoln/undergraduate-thesis/blob/master/Text%20-%20Intrinsic%20motivation%20for%20robotic%20manipulation%20learning%20with%20sparse%20rewards.pdf) (Portuguese).
 
-<img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/pick.gif" width="230" height="150"> <img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/push.gif" width="230" height="150"> <img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/reach.gif" width="230" height="150">
+<div align="center">
+    <img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/pick.gif">
+    <img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/push.gif">
+    <img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/reach.gif">
+</div>
 
 > Learned policies for the tasks Pick And Place (left), Push (center) and Reach (right).
 
@@ -60,18 +64,30 @@ The inspiration and theoretic background was mainly based on
 
 Pick And Place Task (left), Push Task (center) and Reach (right). Blue lines are results for vanilla PPO (baseline) and red lines for PPO + intrinsic motivation.
 
-<img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/pick.png" width="230" height="170"> <img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/push.png" width="230" height="170"> <img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/reach.png" width="230" height="170">
+<div align="center">
+    <img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/pick.png"> 
+    <img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/push.png"> 
+    <img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/reach.png">
+</div>
 
 ### [Entropy](https://arxiv.org/abs/1811.11214) Charts
 
 Pick And Place Task (left), Push Task (center) and Reach (right). Blue lines are results for vanilla PPO (baseline) and red lines for PPO + intrinsic motivation.
 
-<img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/pick_ent.png" width="230" height="170"> <img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/push_ent.png" width="230" height="170"> <img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/reach_ent.png" width="230" height="170">
+<div align="center">
+<img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/pick_ent.png"> 
+<img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/push_ent.png"> 
+<img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/reach_ent.png">
+</div>
 
 ### Intrinsic Reward Charts
 
 Pick And Place Task (left), Push Task (center) and Reach (right).
 
-<img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/pick_int.png" width="230" height="170"> <img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/push_int.png" width="230" height="170"> <img src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/reach_int.png" width="230" height="170">
+<div align="center">
+<img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/pick_int.png"> 
+<img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/push_int.png"> 
+<img class="text-img mw-33" src="https://github.com/bryanlincoln/undergraduate-thesis/raw/master/fig/preview/reach_int.png">
+</div>
 
 The interpretation of these curves can be found in my full report.

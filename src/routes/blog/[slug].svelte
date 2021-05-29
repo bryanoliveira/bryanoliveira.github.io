@@ -95,7 +95,7 @@
         </div>
     </div>
     <div class="col-md-4">
-        <img src={post.image} alt={post.title} class="cover" />
+        <img src={post.image} alt={post.title} class="cover-img" />
     </div>
 </div>
 <hr />
@@ -108,7 +108,7 @@
 </footer>
 
 <style>
-    .cover {
+    .cover-img {
         width: 100%;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
@@ -152,5 +152,11 @@
 
     .post :global(img) {
         margin: 10px 0 20px 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .post :global(.text-img) {
+            max-width: 100% !important;
+        }
     }
 </style>

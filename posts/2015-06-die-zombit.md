@@ -20,15 +20,17 @@ description: "Reviving the classics of the 80's and 90's, Die Zombit is a retrow
 In a world overrun by zombies, you must survive as long as possible and defeat different bosses while unlocking weapons, upgrades, equipment, characters, maps and much more. Reviving the classics of the '80s and '90s, Die Zombit is a retro wave top-down shooting game with an amazing soundtrack and addictive gameplay that guarantees many hours of fun. Check out its trailer:
 
 <div align="center">
-<a href="https://www.youtube.com/watch?v=sO7FSZ3TJns" target="_blank">
-    <img src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/zombit_miniature.jpg" width="480"/>
-</a>
+    <a href="https://www.youtube.com/watch?v=sO7FSZ3TJns" target="_blank">
+        <img class="text-img mw-100" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/zombit_miniature.jpg"/>
+    </a>
 </div>
 
 I made this game during my first year in the Computer Science course. I believe the project could be significantly improved using better design patterns, clearer abstractions and algorithmic complexity in mind. Yet, it is a fun game that you can [download](https://play.google.com/store/apps/details?id=com.elitgames.zombit) (an older version) in Play Store.
 
 <div align="center">
-<img src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/3.png" width="230" height="180"> <img src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/2.png" width="230" height="180"> <img src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/1.png" width="230" height="180">
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/3.png"> 
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/2.png"> 
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/1.png">
 </div>
 
 ## Requirements and Instructions

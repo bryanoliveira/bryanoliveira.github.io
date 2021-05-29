@@ -20,9 +20,9 @@ This is my code for the [I2A2 Bone Age Regression competition](https://www.kaggl
 This competition was inspired by [RSNA's Bone Age challenge](https://www.kaggle.com/kmader/rsna-bone-age), in which given hand X-ray images, the model should predict the patient's bone age.
 
 <div align="center">
-<img src="https://github.com/bryanoliveira/bone-age-regression/raw/master/docs/ex1.png" width="230" height="320">
-<img src="https://github.com/bryanoliveira/bone-age-regression/raw/master/docs/ex2.png" width="230" height="320">
-<img src="https://github.com/bryanoliveira/bone-age-regression/raw/master/docs/ex3.png" width="230" height="320">
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/bone-age-regression/raw/master/docs/ex1.png">
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/bone-age-regression/raw/master/docs/ex2.png">
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/bone-age-regression/raw/master/docs/ex3.png">
 </div>
 
 > X-ray images provided in the competition's dataset.

@@ -31,9 +31,9 @@ You can find our Team Description Paper [here](https://github.com/bryanoliveira/
 -   Qt interface
 
 <div align="center">
-<a href="https://www.youtube.com/watch?v=JQVrX5h7u_8">
-<img src="https://github.com/bryanoliveira/PY-VSSS-INF/raw/master/docs/images/Simulator.gif" width="550"/>
-</a>
+    <a href="https://www.youtube.com/watch?v=JQVrX5h7u_8">
+        <img class="text-img mw-100" src="https://github.com/bryanoliveira/PY-VSSS-INF/raw/master/docs/images/Simulator.gif"/>
+    </a>
 </div>
 
 > Our simulator running two instances of the same control system. Green arrows indicate the robot's movement direction (given by the vector field), and blue, yellow, and red arrows indicate goalie, defender and attacker's targets.
@@ -59,9 +59,9 @@ To open our simulator, run:
 `python aether.py`
 
 <div align="center">
-<a href="https://www.youtube.com/watch?v=UBV4qlAJ-sc">
-<img src="https://github.com/bryanoliveira/PY-VSSS-INF/raw/master/docs/images/Kick.gif" width="600"/>
-</a>
+    <a href="https://www.youtube.com/watch?v=UBV4qlAJ-sc">
+        <img class="text-img mw-100" src="https://github.com/bryanoliveira/PY-VSSS-INF/raw/master/docs/images/Kick.gif"/>
+    </a>
 </div>
 
 ## Social networks

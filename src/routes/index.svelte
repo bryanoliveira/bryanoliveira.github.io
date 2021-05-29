@@ -48,12 +48,11 @@
         content="Hi! I'm Bryan and this is my personal website."
     />
     <!--  Link to your preferred image  -->
-    <!-- <meta property="og:image" content={post.image} /> -->
+    <meta property="og:image" content="/img/icon.png" />
 </svelte:head>
 
 <div class="text-center">
-    <!-- <img src="/img/me.jpg" id="img-me" alt="Bryan Oliveira" width="100px" /> -->
-    <h1 class="cover-heading mt-5">Bryan Oliveira</h1>
+    <h1 class="mt-5">Bryan Oliveira</h1>
     <div class="mb-4">
         <SubLinks />
     </div>
@@ -153,7 +152,7 @@
 
         width: 140px;
         height: 140px;
-        margin: 0 20px 0 0;
+        margin: 0 20px 5px 0;
         border-radius: 10%;
         box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
     }
