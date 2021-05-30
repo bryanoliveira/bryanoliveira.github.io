@@ -1,21 +1,21 @@
 ---
-title: 'Rigid Body Physics Simulator'
+title: '3D Rendering & Force Simulator'
 slug: '2018-12-10-rigid-body-physics'
 date: '2018-12-10'
 urls:
     [
         {
             cta: 'Code',
-            url: 'https://github.com/bryanoliveira/processing-physics-simulator',
+            url: 'https://github.com/bryanoliveira/processing-3d-force-simulator',
         },
     ]
 type: 'Rendering'
 tags: ['project', 'rendering', 'simulation']
 image: '/img/rigidbody_physics.gif'
-description: "3D Rigid Body Physics simulator using only Processing's point() and line functions. Uses Digital Differential Analyzer (DDA) to render lines between two points, Scan Line to render polygons, normal calculation to determine faces to render in 3D space and Newtonian physics. Written in Java."
+description: "3D Force simulator using only Processing's point() and line functions. Uses Digital Differential Analyzer (DDA) to render lines between two points, Scan Line to render polygons, normal calculation to determine faces to render in 3D space and Newtonian physics. Written in Java."
 ---
 
-3D Rigid Body Physics simulator using only [Processing](https://processing.org/)'s point() and line() functions. Uses Digital Differential Analyzer (DDA) to render lines between two points, Scan Line to render polygons, normal calculation to determine faces to render in 3D space and Newtonian physics. Written in Java.
+3D Force simulator using only [Processing](https://processing.org/)'s point() and line() functions. Uses Digital Differential Analyzer (DDA) to render lines between two points, Scan Line to render polygons, normal calculation to determine faces to render in 3D space and Newtonian physics. Written in Java.
 
 <div align="center">
     <img class="text-img mw-100" src="https://raw.githubusercontent.com/bryanlincoln/cg-processing-simulator/master/Demo.gif"/>
@@ -23,7 +23,7 @@ description: "3D Rigid Body Physics simulator using only Processing's point() an
 
 > One of the project's scenes, where one cube is affected by gravity (red) and the other is not (blue).
 
-The program interface allows for real-time selection, positioning, rotation, scaling and acceleration of objects. In a [previous version](https://github.com/bryanoliveira/processing-physics-simulator/blob/fc899000baecf513cc3da4b38ab104cd4de260f7/Simulator/Projections.pde) it also supported selecting between Cavalier, Cabinet, Isometric, Perspective-Z and Perspective-XZ projections.
+The program interface allows for real-time selection, positioning, rotation, scaling and acceleration of objects. In a [previous version](https://github.com/bryanoliveira/processing-3d-force-simulator/blob/fc899000baecf513cc3da4b38ab104cd4de260f7/Simulator/Projections.pde) it also supported selecting between Cavalier, Cabinet, Isometric, Perspective-Z and Perspective-XZ projections.
 
 ## Usage
 

@@ -82,7 +82,7 @@
 <div class="row">
     <div class="col-md-8">
         <p>{@html post.description}</p>
-        <div class="mb-3">
+        <div class="mb-3 text-center text-md-left">
             {#each post.urls as url}
                 <a
                     href={url.url}
