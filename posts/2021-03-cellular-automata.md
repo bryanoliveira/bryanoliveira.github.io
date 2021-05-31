@@ -37,6 +37,17 @@ In the GIF above we're running a 12300x12300 grid using Game of Life rules to ev
     <img class="text-img" src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/toad.gif" width="150">
 </div>
 
+This program also supports a benchmark mode (`-b` option), which outputs the total and average evolution and rendering timings to stdout. Combined with `benchmark.sh` and `benchmark_visualize.ipynb`, it is possible to plot speedups and evolution times for different lattice sizes. Currently, the GPU implementation achieves a relative speedup of more than 3000x over the single-core CPU implementation.
+
+<div align="center">
+<br/>
+<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/speedup.png" align="center" width="300">
+<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/avg_time.png" align="center" width="338">
+</div>
+<br/>
+
+> Speedup over serial (left) and average grid evolution time (right) for lattice sizes 32x32, 64x64, ..., 8192x8192 and 1000 generations. For these tests, initial spawn probability was set to 0.5 and rendering was disabled.
+
 ## Requirements
 
 To run the program you'll need:
@@ -51,6 +62,7 @@ To build it from source you'll also need:
 -   g++ (C++ 17) and _make_
     -   e.g. `sudo apt install build-essential`
 -   Boost C++ Library (program_options module)
+-   [spdlog](https://github.com/gabime/spdlog)
 
 It is possible to run this program in a CPU-only mode, so if you don't have a CUDA-capable video card you may skip the last step. For that to work you will need to run the program with `./automata --cpu` and disable `*.cu` file compilation in the `Makefile`.
 
@@ -87,6 +99,18 @@ If your GPU has enough VRAM (>= 8 GB), you may be able to reproduce the Meta-Toa
     -   **mouse scroll** zooms the grid in and out, relative to the max resolution
     -   **ctrl + mouse scroll** zooms the camera, relative to the world
     -   **middle mouse click** resets scale and translation
+
+## Next steps
+
+There is still much room for improvement. This includes better memory management, use of CPU parallelism and automated tests. My next steps include (but are not limited to):
+
+-   Addition of unit tests (in progress)
+-   Parallel CPU implementation (in progress)
+-   Usage of templates to abstract grid data types (e.g. cells should be represented with 1 bit instead of 8)
+-   Usage of SM shared memory to explore data locality
+-   Support for flexible rule definition
+-   Support for infinite grids (e.g. storing only active cells)
+-   Support for 3-D and N-D grids
 
 ## References
 
