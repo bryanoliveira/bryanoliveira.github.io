@@ -16,7 +16,7 @@ urls:
     ]
 type: 'Robotics'
 tags: ['project', 'robotics', 'leadership']
-image: '/img/vsss.png'
+image: '/img/vsss_cover.gif'
 description: "A stack consisting of image processing, computer vision, team coordination, navigation, control and communication software to compete in the 2018's Latin-American Robotics Competition for the Pequi Mecânico UFG - INF's team."
 ---
 
