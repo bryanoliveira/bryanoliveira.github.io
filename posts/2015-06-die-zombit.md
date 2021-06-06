@@ -27,7 +27,11 @@ In a world overrun by zombies, you must survive as long as possible and defeat d
 
 I made this game during my first year in the Computer Science course. I've learned a lot from this project, from software engineering to game design and a little bit of pixel art. I believe the project could be significantly improved using better design patterns, clearer abstractions and algorithmic complexity in mind. Yet, it is a fun game that you can [download](https://play.google.com/store/apps/details?id=com.elitgames.zombit) (an older version) in Play Store.
 
-
+<div align="center">
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/3.png"> 
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/2.png"> 
+    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/1.png">
+</div>
 
 ## Usage
 
@@ -48,10 +52,6 @@ For the Windows version, do the following:
 
 ## Next steps
 
-<div align="center">
-    <img src="img/zombit_round_up.gif" width="480"/>
-</div>
-
 This version is an unfinished project that rethinks the UI, weapon management and overall objectives. It was made as an indie game event demo and some things are broken. The fixes and new features I plan to add include:
 
 -   Fix joystick and touchscreen support
@@ -59,16 +59,11 @@ This version is an unfinished project that rethinks the UI, weapon management an
 -   Fix end game UI
 -   Add multiplayer support
 
-## Screenshots
+## More GIFs
 
 <div align="center">
-    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/3.png"> 
-    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/2.png"> 
-    <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/1.png">
-</div>
-
-<div align="center">
-    <img src="img/zombit_monster.gif" width="480"/>
+    <img src="img/zombit_monster.gif" width="480"/><br/>
+    <img src="img/zombit_round_up.gif" width="480"/>
 </div>
 
 ## Credits
