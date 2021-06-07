@@ -22,10 +22,10 @@ In a world overrun by zombies, you must survive as long as possible and defeat d
 
 
 <div align="center">
-    <img src="img/zombit_walter.gif" width="480"/>
+    <img class="text-img mw-100" src="img/zombit_walter.gif"/>
 </div>
 
-I made this game during my first year in the Computer Science course. I've learned a lot from this project, from software engineering to game design and a little bit of pixel art. I believe the project could be significantly improved using better design patterns, clearer abstractions and algorithmic complexity in mind. Yet, it is a fun game that you can [download](https://play.google.com/store/apps/details?id=com.elitgames.zombit) (an older version) in Play Store.
+I made this game during my first year in the Computer Science course, using C# and UnityScript. I've learned a lot from this project, from software engineering to game design and a little bit of pixel art. However, I believe the project could be significantly improved using better design patterns, clearer abstractions and algorithmic complexity in mind. Yet, it is a fun game that you can [download](https://play.google.com/store/apps/details?id=com.elitgames.zombit) (an older version) in Play Store.
 
 <div align="center">
     <img class="text-img mw-33" src="https://github.com/bryanoliveira/unity-zombit/raw/master/Images/3.png"> 
@@ -62,8 +62,8 @@ This version is an unfinished project that rethinks the UI, weapon management an
 ## More GIFs
 
 <div align="center">
-    <img src="img/zombit_monster.gif" width="480"/><br/>
-    <img src="img/zombit_round_up.gif" width="480"/>
+    <img class="text-img mw-100" src="img/zombit_monster.gif"/><br/>
+    <img class="text-img mw-100" src="img/zombit_round_up.gif"/>
 </div>
 
 ## Credits
