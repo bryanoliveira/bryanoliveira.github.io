@@ -41,8 +41,8 @@ This program also supports a benchmark mode (`-b` option), which outputs the tot
 
 <div align="center">
 <br/>
-<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/speedup.png" align="center" width="300">
-<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/avg_time.png" align="center" width="338">
+<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/speedup.png" align="center" width="330">
+<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/avg_time.png" align="center" width="330">
 </div>
 <br/>
 
