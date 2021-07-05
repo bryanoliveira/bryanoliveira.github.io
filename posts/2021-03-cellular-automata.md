@@ -23,30 +23,30 @@ A [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton) program 
 
 The main objective of this project is to allow scaling up to a reasonably large number of cells while maintaining the code legibility and allowing for further customisations. It supports command-line arguments to set up quick configs (run `./automata -h` for details) like headless mode (which is significantly faster) and initial patterns (which can be loaded from the `patterns` folder). It doesn't yet support the definition of evolution rules at runtime or lattice size inference, but I'm working on that.
 
-This program can currently evolve a dense & high entropy 182.25 million cell Game of Life grid (13500x13500) with rendering enabled with up to 320 generations per second on a Ryzen 7 3700X / RTX 3080 using up to 200MB RAM and 8.5GB VRAM (which is the actual scaling limiter).
+This program can currently evolve a dense & high entropy 182.25 million cell Game of Life grid (13500x13500) with rendering enabled with up to 729 generations per second on a Ryzen 7 3700X / RTX 3080 using up to 200MB RAM and 8.5GB VRAM (which is the actual scaling limiter).
 
 The ability to evolve and render such large grids allows the program to run some really interesting patterns, like evolving the Game of Life _within_ the Game of Life:
 
 <div align="center">
-    <img class="text-img mw-75" src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/zoom.gif">
+    <img class="text-img mw-75" src="https://github.com/bryanoliveira/cellular-automata/raw/master/images/zoom.gif">
 </div>
 
 In the GIF above we're running a 12300x12300 grid using Game of Life rules to evolve a pattern known as [Meta-Toad](http://b3s23life.blogspot.com/2006_09_01_archive.html). It uses a grid of [OTCA Metapixels](https://www.conwaylife.com/wiki/OTCA_metapixel) and requires about 35 thousand generations of the underlying automaton to represent a single generation of the meta-grid. The pattern being evolved by the meta-grid is known as [Toad](https://www.conwaylife.com/wiki/Toad):
 
 <div align="center">
-    <img class="text-img" src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/toad.gif" width="150">
+    <img class="text-img" src="https://github.com/bryanoliveira/cellular-automata/raw/master/images/toad.gif" width="150">
 </div>
 
-This program also supports a benchmark mode (`-b` option), which outputs the total and average evolution and rendering timings to stdout. Combined with `benchmark.sh` and `benchmark_visualize.ipynb`, it is possible to plot speedups and evolution times for different lattice sizes. Currently, the GPU implementation achieves a relative speedup of more than 3000x over the single-core CPU implementation.
+This program also supports a benchmark mode (`-b` option), which outputs the total and average evolution and rendering timings to stdout. Combined with `benchmark.sh` and `benchmark_visualize.ipynb`, it is possible to plot speedups and evolution times for different lattice sizes. Currently, the GPU implementation achieves a speedup up to 627x over the single-core CPU implementation.
 
 <div align="center">
 <br/>
-<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/speedup.png" align="center" width="330">
-<img src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/docs/avg_time.png" align="center" width="330">
+<img class="text-img mw-50" src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/images/lat_hl_evo_speedup.png">
+<img class="text-img mw-50" src="https://raw.githubusercontent.com/bryanoliveira/cellular-automata/master/images/lat_hl_evo_avg.png">
 </div>
 <br/>
 
-> Speedup over serial (left) and average grid evolution time in milliseconds (right) for lattice sizes 32x32, 64x64, ..., 8192x8192 and 1000 generations, using logarithmic Y axis. "# Threads" refers to the number of threads available for OpenMP CPU (Ryzen 7 3700X) runs while "GPU" refers to CUDA (RTX 3080) runs. For these tests, initial spawn probability was set to 0.5 and rendering was disabled.
+> Speedup over serial (left) and average grid evolution time in milliseconds (right) for lattice sizes 32x32, 64x64, ..., 4096x4096 and 1000 generations, using logarithmic X and Y axis. "# Threads" refers to the number of threads available for OpenMP CPU (Ryzen 7 3700X) runs while "GPU" refers to CUDA (RTX 3080) runs. For these tests, initial spawn probability was set to 0.5 and rendering was disabled.
 
 ## Requirements
 
@@ -76,7 +76,7 @@ To build it from source you'll also need:
 -   Clone this repository
 -   Building and executing:
     -   Run `make` to build and run
-    -   Run `make build` to build
+    -   Run `make automata` to build
     -   Run `make run` to run with default parameters
     -   Run `make clean` to remove generated files
     -   Run `make profile` to run [NVIDIA's nsys](https://developer.nvidia.com/nsight-systems) profiling.
@@ -91,7 +91,7 @@ To build it from source you'll also need:
 
 You may want to set the number of available threads when running in CPU. For that, set the environment variable `OMP_NUM_THREADS` (e.g. `env OMP_NUM_THREADS=8 ./automata -r`).
 
-If your GPU has enough VRAM (>= 8 GB), you may be able to reproduce the Meta-Toad simulation above. Run `./automata -r -x 12300 -y 12300 -p 0 -f patterns/meta-toad.rle` to try it out!
+If your GPU has enough VRAM (>= 8 GB), you may be able to reproduce the Meta-Toad simulation above. Run `./automata -r -x 12300 -y 12300 -p 0 -f patterns/meta-toad.rle --skip-frames 80` to try it out!
 
 ### Runtime Controls
 
@@ -128,7 +128,7 @@ There is still much room for improvement. This includes better memory management
 ## Bonus
 
 <div align="center">
-<img class="text-img mw-100" src="https://github.com/bryanoliveira/cellular-automata/raw/master/docs/1000x1000.gif"/>
+<img class="text-img mw-100" src="https://github.com/bryanoliveira/cellular-automata/raw/master/images/1000x1000.gif"/>
 </div>
 
 > A 1000x1000 randomly initialized grid running Game of life.
