@@ -91,12 +91,12 @@
         </p>
         <!-- My objective interests -->
         <p>
-            I'm deeply interested in high-performance computing, artificial
-            intelligence, cognitive neuroscience, evolution, quantum mechanics
-            and their interconnections. I also like a broader philosophical
-            approach to AI research, as I believe it can be used to explain
-            numerous human behaviors and thought processes. I plan to do a
-            Master's / PhD in this area soon.
+            I'm deeply interested in artificial intelligence, cognitive
+            neuroscience, high-performance computing, evolution, quantum
+            mechanics and their interconnections. I also like a broader
+            philosophical approach to AI research, as I believe it can be used
+            to explain numerous human behaviors and thought processes. I plan to
+            do a Master's / PhD in this area soon.
         </p>
     </div>
 </div>
