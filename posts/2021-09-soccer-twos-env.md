@@ -19,8 +19,10 @@ image: '/img/soccer.gif'
 description: 'A pre-compiled Soccer-Twos environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of Unity ML Agents to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil.'
 ---
 
+A pre-compiled Soccer-Twos environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of Unity ML Agents to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil.
+
 <div align="center">
-    <img class="text-img mw-100" src="https://raw.githubusercontent.com/bryanoliveira/soccer-twos-env/master/images/screenshot.png">
+    <img class="text-img mw-100" src="/img/soccer.gif">
 </div>
 
 Pre-compiled versions of this environment are available for Linux, Windows and MacOS (x86, 64 bits). The source code for this environment is available [here](https://github.com/bryanoliveira/unity-soccer).
@@ -107,3 +109,7 @@ You may implement your own rollout script using `soccer_twos.make(watch=True)` o
 To rollout via CLI, you must create an implementation (subclass) of `soccer_twos.AgentInterface` and run `python -m soccer_twos.watch -m agent_module`.
 This will run a human-friendly version of the environment, where your agent will play against itself.
 You may instead run `python -m soccer_twos.watch -m1 agent_module -m2 opponent_module` to play against a different opponent.
+
+<div align="center">
+    <img class="text-img mw-100" src="https://raw.githubusercontent.com/bryanoliveira/soccer-twos-env/master/images/screenshot.png">
+</div>
