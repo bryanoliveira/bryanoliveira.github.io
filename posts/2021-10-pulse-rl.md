@@ -2,16 +2,14 @@
 title: 'PulseRL: Enabling Offline Reinforcement Learning for Digital Marketing Systems via Conservative Q-Learning'
 slug: '2021-10-25-pulse-rl'
 date: '2021-10-25'
-urls: [
+urls:
+    [
         { cta: 'Code', url: 'https://github.com/dlb-rl/pulse-rl' },
-        # {
-        #     cta: 'Paper',
-        #     url: 'https://github.com/bryanoliveira/cellular-automata/releases',
-        # },
-        # {
-        #     cta: 'Dataset',
-        #     url: 'https://github.com/bryanoliveira/cellular-automata/releases',
-        # },
+        {
+            cta: 'Paper',
+            url: 'https://offline-rl-neurips.github.io/2021/pdf/9.pdf',
+        },
+        { cta: 'Dataset', url: 'https://bit.ly/ac-dataset' },
     ]
 type: 'Workshop Publication'
 tags: ['research', 'publication']
