@@ -38,7 +38,8 @@
     <meta property="og:description" content={post.description} />
 
     <!--  Link to your preferred image  -->
-    <meta property="og:image" name="image" content={post.image} />
+    <meta property="og:image" content={post.image} />
+    <meta name="image" content={post.image} />
 
     <meta name="twitter:card" content="summary_large_image" />
 
