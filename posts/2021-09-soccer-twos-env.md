@@ -19,14 +19,14 @@ urls:
     ]
 type: 'Reinforcement Learning Environment'
 tags: ['project', 'game', 'rl']
-image: 'https://raw.githubusercontent.com/bryanoliveira/soccer-twos-env/master/images/soccer.gif'
+image: '/img/soccer.gif'
 description: 'A pre-compiled Soccer-Twos environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of Unity ML Agents to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil.'
 ---
 
 A pre-compiled [Soccer-Twos](https://github.com/Unity-Technologies/ml-agents/blob/92ff2c26fef7174b443115454fa1c6045d622bc2/docs/Learning-Environment-Examples.md#soccer-twos) environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of [Unity ML Agents](https://github.com/Unity-Technologies/ml-agents) to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil.
 
 <div align="center">
-    <img class="text-img mw-100" src="https://raw.githubusercontent.com/bryanoliveira/soccer-twos-env/master/images/soccer.gif">
+    <img class="text-img mw-100" src="/img/soccer.gif">
 </div>
 <br/>
 

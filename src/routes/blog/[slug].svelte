@@ -26,17 +26,19 @@
 
     <!--  Include canonical links to your blog -->
     <link rel="canonical" href="https://bryanoliveira.github.io/blog/{slug}" />
+    <meta name="Description" content={post.description} />
 
     <!-- Validate your twitter card with https://cards-dev.twitter.com/validator  -->
-    <!-- Update content properties with your URL   -->
-    <!-- 	<meta property="og:url" content=""} /> -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content={post.title} />
-    <meta name="Description" content={post.description} />
+    <meta
+        property="og:url"
+        content="https://bryanoliveira.github.io/blog/{slug}"
+    />
     <meta property="og:description" content={post.description} />
 
     <!--  Link to your preferred image  -->
-    <meta name="image" property="og:image" content={post.image} />
+    <meta property="og:image" name="image" content={post.image} />
 
     <meta name="twitter:card" content="summary_large_image" />
 
