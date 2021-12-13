@@ -15,7 +15,7 @@ urls:
     ]
 type: 'Project'
 tags: ['project', 'parallel', 'cuda', 'opengl', 'game']
-image: '/img/cellular_automata.gif'
+image: 'https://github.com/bryanoliveira/cellular-automata/raw/master/images/100x100.gif'
 description: 'A <a href="https://en.wikipedia.org/wiki/Cellular_automaton" target="_blank">Cellular Automata</a> program built with C++, OpenGL, CUDA and OpenMP. The main objective of this project is to allow scaling up to a reasonably large number of cells while maintaining the code legibility and allowing for further customisations.'
 ---
 

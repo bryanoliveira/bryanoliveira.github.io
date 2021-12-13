@@ -10,7 +10,7 @@ const files = fs.readdirSync("posts");
 // Use highlight.js as the highlighter for the marked library
 marked.setOptions({
   highlight: function (code, lang) {
-    return hljs.highlight(lang, code).value;
+    return hljs.highlight(code, {language: lang, ignoreIllegals: true }).value;
   },
 });
 
