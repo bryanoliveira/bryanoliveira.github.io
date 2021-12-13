@@ -15,7 +15,7 @@ urls:
     ]
 type: 'Project'
 tags: ['project', 'parallel', 'cuda', 'opengl', 'game']
-image: 'https://github.com/bryanoliveira/cellular-automata/raw/master/images/100x100.gif'
+image: '/img/zoom.gif'
 description: 'A <a href="https://en.wikipedia.org/wiki/Cellular_automaton" target="_blank">Cellular Automata</a> program built with C++, OpenGL, CUDA and OpenMP. The main objective of this project is to allow scaling up to a reasonably large number of cells while maintaining the code legibility and allowing for further customisations.'
 ---
 
@@ -28,7 +28,7 @@ This program can currently evolve a dense & high entropy 182.25 million cell Gam
 The ability to evolve and render such large grids allows the program to run some really interesting patterns, like evolving the Game of Life _within_ the Game of Life:
 
 <div align="center">
-    <img class="text-img mw-75" src="https://github.com/bryanoliveira/cellular-automata/raw/master/images/zoom.gif">
+    <img class="text-img mw-75" src="/img/zoom.gif">
 </div>
 
 In the GIF above we're running a 12300x12300 grid using Game of Life rules to evolve a pattern known as [Meta-Toad](http://b3s23life.blogspot.com/2006_09_01_archive.html). It uses a grid of [OTCA Metapixels](https://www.conwaylife.com/wiki/OTCA_metapixel) and requires about 35 thousand generations of the underlying automaton to represent a single generation of the meta-grid. The pattern being evolved by the meta-grid is known as [Toad](https://www.conwaylife.com/wiki/Toad):
