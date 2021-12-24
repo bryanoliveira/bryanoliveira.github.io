@@ -4,10 +4,7 @@ slug: '2021-09-05-soccer-twos-env'
 date: '2021-09-05'
 urls:
     [
-        {
-            cta: 'Python Package',
-            url: 'https://pypi.org/project/ceia-soccer-twos/',
-        },
+        { cta: 'Python Package', url: 'https://pypi.org/project/soccer-twos/' },
         {
             cta: 'Environment Code',
             url: 'https://github.com/bryanoliveira/soccer-twos-env',
