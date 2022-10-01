@@ -66,37 +66,36 @@
                 alt="Bryan Oliveira"
                 align="left"
             />
-            Hi! I'm Bryan, {new Date().getFullYear() - 1997}, B.S. in Computer
-            Science by Universidade Federal de Goiás (Brazil). Elegant code
-            writer, eclectic listener, voracious meta-learner and sporadic
-            gamer. I'm amazed by nature and how the mind works - things I'm
-            forever curious about.
+            Hi! I'm Bryan, {new Date().getFullYear() - 1997}, writing from
+            Goiânia/Brazil. I hold a Bachelor's degree in Computer Science from
+            Universidade Federal de Goiás, where I'm currently a Master's
+            student focusing on Artificial Intelligence. Elegant code writer,
+            eclectic listener, voracious meta-learner, and sporadic gamer. I'm
+            always amazed by nature and how the mind works - things I'm forever
+            curious about.
         </p>
         <!-- What I do -->
         <p>
-            I'm currently working on offline reinforcement learning applied to
-            debt collection and automatic advertisement generation as Machine
-            Learning Engineer at <a
-                href="http://centrodeia.org/"
+            I'm currently working at <a
+                href="https://embrapii.org.br/unidades/unidade-embrapii-em-inteligencia-artificial-ceia-ufg-centro-de-excelencia-em-inteligencia-artificial/"
                 target="_blank">CEIA</a
             >
             /
             <a href="http://www.deeplearningbrasil.com.br/" target="_blank"
                 >Deep Learning Brasil</a
-            >. I'm also working as Machine Learning Operations (MLOps) Engineer
-            at
-            <a href="http://www.datah.ai/" target="_blank">Data-H</a>,
-            developing automated pipelines for data processing, training,
-            evaluating, deploying, and monitoring ML models.
+            >, leading an AI research project for automatic advertisement
+            generation and real-time campaign optimization. I'm also researching
+            offline reinforcement learning applied to debt collection, as well
+            as developing and deploying recommender systems for tourism
+            products.
         </p>
         <!-- My objective interests -->
         <p>
             I'm deeply interested in artificial intelligence, cognitive
             neuroscience, high-performance computing, evolution, quantum
-            mechanics and their interconnections. I also like a broader
+            mechanics, and their interconnections. I also like a broader
             philosophical approach to AI research, as I believe it can be used
-            to explain numerous human behaviors and thought processes. I plan to
-            do a Master's / PhD in this area soon.
+            to explain numerous human behaviors and thought processes.
         </p>
     </div>
 </div>
