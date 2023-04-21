@@ -4,6 +4,7 @@ slug: '2021-03-10-cellular-automata'
 date: '2021-03-10'
 urls:
     [
+        { cta: 'Paper', url: '/pdfs/Automatos_Celulares_CUDA_OpenMP.pdf' },
         {
             cta: 'Code',
             url: 'https://github.com/bryanoliveira/cellular-automata',
