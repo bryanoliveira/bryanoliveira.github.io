@@ -68,7 +68,7 @@
             />
             Hi! I'm Bryan, a {new Date().getFullYear() - 1997}-year-old AI enthusiast based in Goiânia, Brazil. 
             I hold a Bachelor's degree in Computer Science from
-            Universidade Federal de Goiás, where I'm currently a Master's
+            <a href="https://international.ufg.br/" target="_blank">Federal University of Goiás</a>, where I'm currently a Master's
             student focusing on Artificial Intelligence (AI) and Reinforcement Learning (RL). Elegant code writer,
             eclectic listener, casual photographer, voracious meta-learner, and sporadic gamer. I am perpetually 
             fascinated by nature's wonders, including the intricacies of the human mind.
