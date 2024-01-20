@@ -66,32 +66,28 @@
                 alt="Bryan Oliveira"
                 align="left"
             />
-            Hi! I'm Bryan, {new Date().getFullYear() - 1997}, writing from
-            Goiânia/Brazil. I hold a Bachelor's degree in Computer Science from
+            Hi! I'm Bryan, a {new Date().getFullYear() - 1997}-year-old AI enthusiast based in Goiânia, Brazil. 
+            I hold a Bachelor's degree in Computer Science from
             Universidade Federal de Goiás, where I'm currently a Master's
-            student focusing on Artificial Intelligence. Elegant code writer,
-            eclectic listener, voracious meta-learner, and sporadic gamer. I'm
-            always amazed by nature and how the mind works - things I'm forever
-            curious about.
+            student focusing on Artificial Intelligence (AI) and Reinforcement Learning (RL). Elegant code writer,
+            eclectic listener, casual photographer, voracious meta-learner, and sporadic gamer. I am perpetually 
+            fascinated by nature's wonders, including the intricacies of the human mind.
         </p>
         <!-- What I do -->
         <p>
-            I'm currently working at <a
-                href="https://embrapii.org.br/unidades/unidade-embrapii-em-inteligencia-artificial-ceia-ufg-centro-de-excelencia-em-inteligencia-artificial/"
-                target="_blank">CEIA</a
-            >
-            /
-            <a href="http://www.deeplearningbrasil.com.br/" target="_blank"
-                >Deep Learning Brasil</a
-            >, leading an AI research project for automatic advertisement
-            generation and real-time campaign optimization. I'm also researching
-            offline reinforcement learning applied to debt collection, as well
-            as developing and deploying recommender systems for tourism
-            products.
+            I'm currently working at the <a
+                href="https://ceia.ufg.br"
+                target="_blank">Center of Excellence in Artificial Intelligence (CEIA)</a
+            >, leading an AI research projects for automatic advertisement
+            generation, real-time campaign optimization, and <a href="https://huggingface.co/blog/rlhf"
+            target="_blank">Reinforcement Learning from Human Feedback (RLHF)</a> to enhance large language models. My <a
+            href="https://www.linkedin.com/in/bryanoliveira/" target="_blank">past experiences</a>
+            involve leveraging RL for debt collection and machine learning engineering for developing and deploying
+            products for tourism recommendation, sales forecasting, and energy optimization for cooling systems.
         </p>
-        <!-- My objective interests -->
+        <!-- My objectives and interests -->
         <p>
-            I'm deeply interested in artificial intelligence, cognitive
+            I'm deeply interested in artificial intelligence,
             neuroscience, high-performance computing, evolution, quantum
             mechanics, and their interconnections. I also like a broader
             philosophical approach to AI research, as I believe it can be used
