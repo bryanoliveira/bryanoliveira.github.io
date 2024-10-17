@@ -14,7 +14,7 @@ urls:
 type: 'Workshop Publication'
 tags: ['research', 'publication']
 image: '/img/pulserl.png'
-description: 'Offline Reinforcement Learning for Digital Marketing Systems via Conservative Q-Learning - Presentation at the 2nd Offline Reinforcement Learning Workshop at the 35th Conference on Neural Information Processing (NeurIPS 2021).'
+description: 'PulseRL is an offline reinforcement learning system for optimizing communication channels in Digital Marketing Systems (DMS) using Conservative Q-Learning (CQL). It learns from historical data, avoiding costly interactions, and reduces bias from out-of-distribution actions. PulseRL outperformed RL baselines in real-world DMS experiments, proving its effectiveness at scale.'
 ---
 
 ## Abstract
@@ -27,6 +27,5 @@ Digital Marketing Systems (DMS) are the primary point of contact between a digit
 
 > Illustration of PulseRL’s system pipeline. We compose it with different big data storage models, a data transformation engine, a task manager, and specialized microservices for training and inference, which ensures scalability for handling millions of users on a daily basis. It also provides version control for source code, dataset, MDP’s and RL agents.
 
-<br/><br/>
-
-More info soon.
+---
+Presentation at the 2nd Offline Reinforcement Learning Workshop at the 35th Conference on Neural Information Processing (NeurIPS 2021).

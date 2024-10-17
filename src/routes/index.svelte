@@ -25,8 +25,8 @@
 
     const tabs = {
         all: 'All',
-        game: 'Games',
         research: 'Research',
+        game: 'Games',
     }
     const tab_all = 'all'
     let active_tab = tab_all
@@ -71,19 +71,19 @@
             <a href="https://international.ufg.br/" target="_blank">Federal University of Goiás</a>, where I'm currently a Master's
             student focusing on Artificial Intelligence (AI) and Reinforcement Learning (RL). Elegant code writer,
             eclectic listener, casual photographer, voracious meta-learner, and sporadic gamer. I am perpetually 
-            fascinated by nature's wonders, including the intricacies of the human mind.
+            fascinated by nature's wonders, especially the intricacies of the human mind.
         </p>
         <!-- What I do -->
         <p>
             I'm currently working at the <a
                 href="https://ceia.ufg.br"
                 target="_blank">Center of Excellence in Artificial Intelligence (CEIA)</a
-            >, leading AI research projects for automatic advertisement
-            generation, real-time campaign optimization, and <a href="https://huggingface.co/blog/rlhf"
+            > and the <a href="https://akcit.ufg.br/" target="_blank">Advanced Knowledge Center for Immersive Technologies (AKCIT)</a>,
+            leading AI research projects for real-time optimization, and <a href="https://huggingface.co/blog/rlhf"
             target="_blank">Reinforcement Learning from Human Feedback (RLHF)</a> to enhance large language models. My <a
             href="https://www.linkedin.com/in/bryanoliveira/" target="_blank">past experiences</a>
-            involve leveraging RL for debt collection and machine learning engineering for developing and deploying
-            products for tourism recommendation, sales forecasting, and energy consumption optimization.
+            include leveraging RL for multichannel advertisement optimization and debt collection, and machine learning engineering 
+            for developing and deploying products for tourism recommendation, sales forecasting, and energy consumption optimization.
         </p>
         <!-- My objectives and interests -->
         <p>

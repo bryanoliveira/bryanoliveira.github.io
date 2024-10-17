@@ -40,6 +40,7 @@
     }
     .post-item a {
         padding: 3px 0;
+        width: 100%;
     }
     .post-item .post-item small {
         line-height: 30px;
@@ -49,6 +50,8 @@
     }
     .post-item img {
         width: 100%;
+        height: auto;
+        object-fit: cover;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 </style>
