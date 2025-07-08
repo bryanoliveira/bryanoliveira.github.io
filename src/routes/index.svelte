@@ -52,7 +52,7 @@
 </svelte:head>
 
 <div class="text-center">
-    <h1 class="mt-5">Bryan Oliveira</h1>
+    <h1 class="mt-5">Bryan de Oliveira</h1>
     <div class="mb-4">
         <SubLinks />
     </div>
@@ -63,35 +63,39 @@
             <img
                 src="/img/me.jpg"
                 id="img-me"
-                alt="Bryan Oliveira"
+                alt="Bryan de Oliveira"
                 align="left"
             />
-            Hi! I'm Bryan, a {new Date().getFullYear() - 1997}-year-old AI enthusiast based in Goiânia, Brazil. 
-            I hold a Bachelor's degree in Computer Science from
-            <a href="https://international.ufg.br/" target="_blank">Federal University of Goiás</a>, where I'm currently a Master's
-            student focusing on Artificial Intelligence (AI) and Reinforcement Learning (RL). Elegant code writer,
-            eclectic listener, casual photographer, voracious meta-learner, and sporadic gamer. I am perpetually 
-            fascinated by nature's wonders, especially the intricacies of the human mind.
+            Hi! I'm Bryan, a {new Date().getFullYear() - 1997}-year-old AI researcher based in Goiânia, Brazil. 
+            I recently completed my Master's degree in Computer Science from the
+            <a href="https://international.ufg.br/" target="_blank">Federal University of Goiás</a>, 
+            specializing in Deep Reinforcement Learning with a publication at <a href="https://icml.cc/virtual/2025/poster/43653" target="_blank">ICML 2025</a>. 
+            I am actively seeking PhD opportunities to advance cutting-edge research in AI and RL towards developing generalist agents that learn from experience.
         </p>
         <!-- What I do -->
         <p>
-            I'm currently working at the <a
+            I currently work at the <a
                 href="https://ceia.ufg.br"
                 target="_blank">Center of Excellence in Artificial Intelligence (CEIA)</a
             > and the <a href="https://akcit.ufg.br/" target="_blank">Advanced Knowledge Center for Immersive Technologies (AKCIT)</a>,
-            leading AI research projects for real-time optimization, and <a href="https://huggingface.co/blog/rlhf"
-            target="_blank">Reinforcement Learning from Human Feedback (RLHF)</a> to enhance large language models. My <a
-            href="https://www.linkedin.com/in/bryanoliveira/" target="_blank">past experiences</a>
-            include leveraging RL for multichannel advertisement optimization and debt collection, and machine learning engineering 
-            for developing and deploying products for tourism recommendation, sales forecasting, and energy consumption optimization.
+            where I lead interdisciplinary teams on cutting-edge AI R&D projects. My current work focuses on LLM training 
+            and evaluation through reinforcement learning, emphasizing reasoning, tool use, information-seeking behavior, 
+            interpretability, and steerability. I also explore LLM-based multi-agent systems, investigating evolutionary search, 
+            computer use, and implicit feedback mechanisms. My approach combines theoretical advances in Deep RL with practical applications, 
+            bridging the gap between academic innovation and real-world deployment.
         </p>
-        <!-- My objectives and interests -->
+        <!-- Research focus and experience -->
         <p>
-            I'm deeply interested in artificial intelligence,
-            neuroscience, high-performance computing, evolution, quantum
-            mechanics, and their interconnections. I also like a broader
-            philosophical approach to AI research, as I believe it can be used
-            to explain numerous human behaviors and thought processes.
+            My research expertise spans Deep Reinforcement Learning, with particular focus on representation learning, model-based RL, and industry applications 
+            in pricing optimization and recommender systems. I have proven ability to structure and execute complex R&D projects from 
+            conception to publication, complemented by extensive engineering experience in developing and deploying ML systems. This background provides me with unique 
+            insights into both the theoretical foundations and practical constraints of AI systems.
+        </p>
+        <!-- Vision and interests -->
+        <p>
+            I'm deeply interested in the fundamental questions of artificial intelligence, neuroscience, and their interconnections, 
+            particularly in how we can develop AI systems that learn better representations and leverage world models to effectively plan and adapt. I believe in a principled, interdisciplinary 
+            approach to AI research that combines theory with rigorous empirical validation and real-world impact.
         </p>
     </div>
 </div>
@@ -136,7 +140,7 @@
             title="Linkedin">LinkedIn</a
         >.
         <br />
-        You can also check out my <a href="/blog" rel="prefetch">blog</a>.
+        <!-- You can also check out my <a href="/blog" rel="prefetch">blog</a>. -->
     </small>
 </footer>
 

@@ -1,0 +1,62 @@
+{
+    "compilerOptions": {
+      // Target and Module
+      "target": "ES2020",
+      "module": "ESNext",
+      "lib": ["ES2020", "DOM", "DOM.Iterable"],
+      
+      // Module Resolution
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "allowJs": true,
+      "checkJs": false,
+      
+      // Paths and Resolution
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"],
+        "@components/*": ["src/components/*"],
+        "@routes/*": ["src/routes/*"]
+      },
+      "resolveJsonModule": true,
+      
+      // Output
+      "outDir": "./dist",
+      "sourceMap": true,
+      "declaration": false,
+      "removeComments": false,
+      
+      // Type Checking
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUncheckedIndexedAccess": false,
+      
+      // Advanced
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "verbatimModuleSyntax": false,
+      
+      // Svelte-specific
+      "importsNotUsedAsValues": "preserve"
+    },
+    "include": [
+      "src/**/*",
+      "src/**/*.svelte",
+      "*.js",
+      "*.ts"
+    ],
+    "exclude": [
+      "node_modules",
+      "__sapper__",
+      "static",
+      "dist",
+      "*.config.js"
+    ],
+    "types": ["svelte"]
+  }
