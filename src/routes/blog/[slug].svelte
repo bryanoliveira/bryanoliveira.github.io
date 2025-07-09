@@ -89,7 +89,7 @@
             {#each post.urls as url}
                 <a
                     href={url.url}
-                    class="btn btn-sm btn-secondary mr-1 no-underline"
+                    class="btn btn-sm btn-secondary mr-1 no-underline mb-1"
                     target="_blank"
                 >
                     {url.cta} ⧉

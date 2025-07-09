@@ -11,8 +11,8 @@ urls:
         },
         { cta: 'Dataset', url: 'https://bit.ly/ac-dataset' },
     ]
-type: 'Workshop Publication'
-tags: ['research', 'publication']
+type: 'Workshop on Offline RL @ NeurIPS 2021'
+tags: ['research', 'publication', 'featured']
 image: '/img/pulserl.png'
 description: 'PulseRL is an offline reinforcement learning system for optimizing communication channels in Digital Marketing Systems (DMS) using Conservative Q-Learning (CQL). It learns from historical data, avoiding costly interactions, and reduces bias from out-of-distribution actions. PulseRL outperformed RL baselines in real-world DMS experiments, proving its effectiveness at scale.'
 ---

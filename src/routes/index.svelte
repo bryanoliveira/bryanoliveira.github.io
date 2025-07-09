@@ -24,12 +24,11 @@
     import PostListItem from '../components/PostListItem.svelte'
 
     const tabs = {
+        featured: 'Featured',
         all: 'All',
-        research: 'Research',
-        game: 'Games',
     }
     const tab_all = 'all'
-    let active_tab = tab_all
+    let active_tab = 'featured'
 </script>
 
 <svelte:head>
@@ -118,8 +117,15 @@
         </ul>
     </div>
     <div class="mt-4 pt-3 text-justify">
+        {#if active_tab != tab_all}
+            {#each posts as post}
+                {#if post.tags.includes("highlight")}
+                    <PostListItem {post} />
+                {/if}
+            {/each}
+        {/if}
         {#each posts as post}
-            {#if active_tab == tab_all || post.tags.includes(active_tab)}
+            {#if active_tab == tab_all || (post.tags.includes(active_tab) && !post.tags.includes("highlight"))}
                 <PostListItem {post} />
             {/if}
         {/each}
