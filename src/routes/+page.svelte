@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from 'svelte'
     export let data
     import SubLinks from '$lib/components/SubLinks.svelte'
     import PostListItem from '$lib/components/PostListItem.svelte'
@@ -9,6 +10,40 @@
     }
     const tab_all = 'all'
     let active_tab = 'featured'
+
+    // Lazy load state for "All" tab
+    const BATCH_SIZE = 5
+    let visibleCount = BATCH_SIZE
+    let sentinel
+    let observer
+
+    $: allPosts = data.posts
+    $: visibleAllPosts = allPosts.slice(0, visibleCount)
+    $: hasMore = visibleCount < allPosts.length
+
+    // Reset visible count when switching to "All" tab
+    $: if (active_tab === tab_all) {
+        visibleCount = BATCH_SIZE
+    }
+
+    function loadMore() {
+        visibleCount = Math.min(visibleCount + BATCH_SIZE, allPosts.length)
+    }
+
+    onMount(() => {
+        observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) loadMore()
+            },
+            { rootMargin: '200px' }
+        )
+        return () => observer?.disconnect()
+    })
+
+    // Observe/unobserve sentinel whenever it changes (tab switch or posts exhausted)
+    $: if (observer && sentinel) {
+        observer.observe(sentinel)
+    }
 </script>
 
 <svelte:head>
@@ -103,12 +138,21 @@
                     <PostListItem {post} />
                 {/if}
             {/each}
-        {/if}
-        {#each data.posts as post}
-            {#if active_tab == tab_all || (post.tags.includes(active_tab) && !post.tags.includes("highlight"))}
+        {:else}
+            {#each visibleAllPosts as post}
                 <PostListItem {post} />
+            {/each}
+            {#if hasMore}
+                <div bind:this={sentinel} class="sentinel"></div>
             {/if}
-        {/each}
+        {/if}
+        {#if active_tab != tab_all}
+            {#each data.posts as post}
+                {#if post.tags.includes(active_tab) && !post.tags.includes("highlight")}
+                    <PostListItem {post} />
+                {/if}
+            {/each}
+        {/if}
     </div>
 </div>
 <hr class="ml-5 mr-5 mt-5" />
@@ -152,5 +196,9 @@
     }
     #portfolio-nav a:hover {
         border-bottom: none;
+    }
+
+    .sentinel {
+        height: 1px;
     }
 </style>
