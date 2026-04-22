@@ -9,7 +9,7 @@ tags: ['publication', 'llm', 'reasoning', 'research']
 venue: 'AAAI 2026 — LaCATODA Workshop'
 oral: false
 authors: 'ML da Luz, B Brandão, LGB Martins, G Oliveira, BLM de Oliveira, LC Melo, et al.'
-image: '/img/placeholder.png'
+image: '/img/papers/2026-01-latent-reasoning.png'
 description: 'We propose partial reasoning in language models guided by uncertainty, using search and refinement to selectively truncate chain-of-thought while preserving performance.'
 ---
 

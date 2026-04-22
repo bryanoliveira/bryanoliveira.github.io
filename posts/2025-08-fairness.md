@@ -8,7 +8,7 @@ tags: ['publication', 'research', 'rl']
 venue: 'RLC 2025 — Workshop on Practical Insights into RL for Real-World Systems'
 oral: false
 authors: 'LGB Martins, BLM de Oliveira, B Brandão, TWL Soares, et al.'
-image: '/img/placeholder.png'
+image: '/img/papers/2025-08-fairness.jpg'
 description: 'We propose an adaptive RL approach for recommender systems that personalizes fairness based on user diversity preferences.'
 ---
 

@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "2025-11-grpo-vs-ppo",
+    "title": "Learning Without Critics? Revisiting GRPO in Classical Reinforcement Learning Environments",
+    "paperUrl": "https://arxiv.org/abs/2511.03527",
+    "codeUrl": "https://github.com/AKCIT-RL/revisiting-grpo",
+    "dataUrl": null,
+    "demoUrl": null,
+    "otherLinks": [],
+    "imageFile": "2025-11-grpo-vs-ppo.jpg",
+    "imageCaption": "Performance comparison of PPO and GRPO across classical RL environments (CartPole, Acrobot, HalfCheetah, Humanoid, MountainCarContinuous), showing that relative performance is highly context-dependent."
+  },
+  {
+    "slug": "2026-01-infogainme",
+    "title": "Do Reasoning Models Ask Better Questions? A Formal Information-Theoretic Analysis on Multi-Turn LLM Games",
+    "paperUrl": "https://arxiv.org/abs/2601.17716",
+    "codeUrl": "https://github.com/machadoDaniels/info-gainme",
+    "dataUrl": null,
+    "demoUrl": null,
+    "otherLinks": [],
+    "imageFile": "2026-01-infogainme.png",
+    "imageCaption": "Framework architecture for the multi-turn LLM information-seeking evaluation, showing the flow between Seeker, Oracle, and Pruner agents in a hierarchical knowledge graph environment."
+  },
+  {
+    "slug": "2026-01-latent-reasoning",
+    "title": "Partial Reasoning in Language Models: Search and Refinement Guided by Uncertainty",
+    "paperUrl": "https://arxiv.org/abs/2601.12040",
+    "codeUrl": null,
+    "dataUrl": null,
+    "demoUrl": null,
+    "otherLinks": [],
+    "imageFile": "2026-01-latent-reasoning.png",
+    "imageCaption": "Overview of the PREGU architecture: the LLM generates partial reasoning paths in token space, halts when entropy exceeds threshold, then refines in latent space via Soft Reasoning to select the best answer."
+  },
+  {
+    "slug": "2026-03-conv-to-bench",
+    "title": "CONV-TO-BENCH: Evaluating Language Models via User\u2013Assistant Dialogues in Code Tasks",
+    "paperUrl": "https://openreview.net/forum?id=PmkOtKBMr0",
+    "codeUrl": null,
+    "dataUrl": null,
+    "demoUrl": null,
+    "otherLinks": [],
+    "imageFile": null,
+    "imageCaption": null
+  },
+  {
+    "slug": "2025-08-fairness",
+    "title": "Personalizing Fairness: Adaptive RL with User Diversity Preference for Recommender Systems",
+    "paperUrl": "https://openreview.net/forum?id=p9ACyszcwf",
+    "codeUrl": null,
+    "dataUrl": null,
+    "demoUrl": null,
+    "otherLinks": [],
+    "imageFile": "2025-08-fairness.jpg",
+    "imageCaption": "A2Fair framework figure from the paper showing the adaptive RL approach for personalized fairness in recommender systems."
+  },
+  {
+    "slug": "2025-03-infoquest",
+    "title": "InfoQuest: Evaluating Multi-Turn Dialogue Agents for Open-Ended Conversations with Hidden Context",
+    "paperUrl": "https://arxiv.org/abs/2502.12257",
+    "codeUrl": null,
+    "dataUrl": "https://huggingface.co/datasets/bryanlincoln/infoquest",
+    "demoUrl": null,
+    "otherLinks": [],
+    "imageFile": "2025-03-infoquest.png",
+    "imageCaption": "InfoQuest's three-stage benchmark construction process: initial state generation, user setting with persona/goals/constraints, and checklist generation for evaluating information gathering."
+  },
+  {
+    "slug": "2025-07-spgym",
+    "title": "Sliding Puzzles Gym: A Scalable Benchmark for State Representation in Visual Reinforcement Learning",
+    "paperUrl": "https://arxiv.org/abs/2410.14038",
+    "codeUrl": "https://github.com/bryanoliveira/sliding-puzzles-gym",
+    "dataUrl": null,
+    "demoUrl": null,
+    "otherLinks": [
+      {
+        "cta": "Experiments Code",
+        "url": "https://github.com/bryanoliveira/spgym-experiments"
+      },
+      {
+        "cta": "Poster",
+        "url": "https://icml.cc/virtual/2025/poster/43653"
+      }
+    ],
+    "imageFile": "2025-07-spgym.png",
+    "imageCaption": "Overview of SPGym: the framework extends the 8-tile puzzle by replacing numbered tiles with image patches, sampling from a pool to scale visual representation complexity while keeping environment dynamics fixed."
+  },
+  {
+    "slug": "2025-08-recovery",
+    "title": "Reinforcement Learning for Debt Pricing: A Case Study in Financial Services",
+    "paperUrl": "https://openreview.net/forum?id=1cfG46owm8",
+    "codeUrl": null,
+    "dataUrl": null,
+    "demoUrl": null,
+    "otherLinks": [],
+    "imageFile": "2025-08-recovery.jpg",
+    "imageCaption": "Traffic percentage figure from the paper showing the deployment results of the RL-based debt pricing system in production at a large financial institution."
+  },
+  {
+    "slug": "2021-10-pulse-rl",
+    "title": "PulseRL: Enabling Offline Reinforcement Learning for Digital Marketing Systems via Conservative Q-Learning",
+    "paperUrl": "https://offline-rl-neurips.github.io/2021/pdf/9.pdf",
+    "codeUrl": "https://github.com/dlb-rl/pulse-rl",
+    "dataUrl": "https://bit.ly/ac-dataset",
+    "demoUrl": null,
+    "otherLinks": [],
+    "imageFile": "2021-10-pulse-rl.png",
+    "imageCaption": "PulseRL system architecture: the end-to-end offline RL pipeline for communication channel optimization in Digital Marketing Systems, including data processing, CQL training, deployment, and monitoring."
+  }
+]

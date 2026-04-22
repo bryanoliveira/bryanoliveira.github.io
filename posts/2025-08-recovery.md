@@ -14,7 +14,7 @@ tags: ['research', 'featured', 'publication']
 venue: 'RLC 2025 — Workshop on Practical Insights into RL for Real-World Systems'
 oral: false
 authors: 'B Brandão, LGB Martins, BLM de Oliveira, LC Melo, ML da Luz, E Garcia, et al.'
-image: '/img/recovery_traffic_percentage.jpg'
+image: '/img/papers/2025-08-recovery.jpg'
 description: 'Offline RL with LTV-based rewards and bandit orchestration at a large financial institution improved collection values.'
 ---
 
