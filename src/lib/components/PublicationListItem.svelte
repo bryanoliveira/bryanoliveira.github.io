@@ -1,78 +1,126 @@
 <script>
     export let post
-    const boldName = (authors) => {
+
+    // Get the primary paper URL (handles both string arrays and object arrays)
+    function getPaperUrl(urls) {
+        if (!urls || urls.length === 0) return null
+        const first = urls[0]
+        return typeof first === 'string' ? first : first.url
+    }
+
+    // Get all URLs as {cta, url} pairs
+    function getLinks(post) {
+        const links = []
+        if (post.urls && post.urls.length > 0) {
+            for (const u of post.urls) {
+                if (typeof u === 'string') {
+                    links.push({ cta: 'Paper', url: u })
+                } else {
+                    links.push({ cta: u.cta || 'Link', url: u.url })
+                }
+            }
+        }
+        if (post.arxiv && !links.some(l => l.url.includes(post.arxiv))) {
+            links.push({ cta: 'arXiv', url: `https://arxiv.org/abs/${post.arxiv}` })
+        }
+        return links
+    }
+
+    // Bold Bryan's name in author string
+    function boldName(authors) {
         if (!authors) return ''
-        return authors.replace(/Bryan\s+[\w\.]+\s+de Oliveira|BLM de Oliveira|B\.?\s*L\.?\s*M\.?\s*de Oliveira/gi, '<strong>$&</strong>')
+        return authors.replace(
+            /Bryan[\s\w\.]*de Oliveira|BLM de Oliveira|B\.?\s*L\.?\s*M\.?\s*de Oliveira/gi,
+            '<strong>$&</strong>'
+        )
     }
 </script>
 
-<div class="pub-item mb-4">
-    <div class="pub-title">
-        {#if post.urls && post.urls.length > 0}
-            <a href={typeof post.urls[0] === 'string' ? post.urls[0] : post.urls[0].url} target="_blank">{post.title}</a>
-        {:else}
-            <span>{post.title}</span>
+<div class="row post-item mb-5">
+    <div class="col-md-8">
+        <h3 class="text-left">
+            {#if getPaperUrl(post.urls)}
+                <a href={getPaperUrl(post.urls)} target="_blank">{post.title}</a>
+            {:else}
+                {post.title}
+            {/if}
+            {#if post.oral}
+                <span class="badge-oral">Oral</span>
+            {/if}
+        </h3>
+        <small class="text-muted">
+            {post.venue || post.type} · {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+        </small>
+        {#if post.authors}
+            <p class="pub-authors">{@html boldName(post.authors)}</p>
         {/if}
-        {#if post.oral}
-            <span class="badge-oral ms-2">Oral</span>
-        {/if}
+        <p class="item-description indicate_blank">
+            {post.description}
+        </p>
+        <div class="pub-links">
+            {#each getLinks(post) as link}
+                <a href={link.url} target="_blank" class="btn-pub">{link.cta}</a>
+            {/each}
+        </div>
     </div>
-    {#if post.authors}
-        <div class="pub-authors">{@html boldName(post.authors)}</div>
-    {/if}
-    {#if post.venue}
-        <div class="pub-venue"><em>{post.venue}</em></div>
-    {/if}
-    <div class="pub-links mt-1">
-        {#if post.urls && post.urls.length > 0}
-            <a href={typeof post.urls[0] === 'string' ? post.urls[0] : post.urls[0].url} target="_blank" class="btn-pub">Paper</a>
-        {/if}
-        {#if post.arxiv}
-            <a href="https://arxiv.org/abs/{post.arxiv}" target="_blank" class="btn-pub">arXiv</a>
+    <div class="col-md-4 text-center">
+        {#if getPaperUrl(post.urls)}
+            <a href={getPaperUrl(post.urls)} target="_blank">
+                <img alt={post.title} src={post.image} />
+            </a>
+        {:else}
+            <img alt={post.title} src={post.image} />
         {/if}
     </div>
 </div>
 
 <style>
-    .pub-item {
-        border-left: 3px solid rgba(128,128,128,0.3);
-        padding-left: 1rem;
-        margin-bottom: 1.5rem;
+    .post-item h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0;
     }
-    .pub-title {
-        font-size: 1.05rem;
-        font-weight: 600;
-        margin-bottom: 0.2rem;
+    .post-item a {
+        padding: 3px 0;
+        width: 100%;
+    }
+    .post-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
     .pub-authors {
         font-size: 0.9rem;
         color: #666;
-        margin-bottom: 0.15rem;
-    }
-    .pub-venue {
-        font-size: 0.9rem;
-        color: #888;
-        margin-bottom: 0.15rem;
+        margin: 0.2rem 0 0.1rem;
     }
     .badge-oral {
         background: #d4edda;
         color: #155724;
         border-radius: 4px;
-        padding: 0.1rem 0.4rem;
-        font-size: 0.75rem;
-        font-weight: 600;
+        padding: 0.1rem 0.45rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        vertical-align: middle;
         display: inline-block;
+        margin-left: 0.4rem;
+        letter-spacing: 0.03em;
+    }
+    .pub-links {
+        margin-top: 0.3rem;
     }
     .btn-pub {
         font-size: 0.8rem;
-        border: 1px solid rgba(128,128,128,0.4);
+        border: 1px solid rgba(128,128,128,0.45);
         border-radius: 4px;
-        padding: 0.15rem 0.5rem;
+        padding: 0.15rem 0.55rem;
         text-decoration: none;
-        margin-right: 0.4rem;
+        margin-right: 0.35rem;
         color: inherit;
+        display: inline-block;
     }
     .btn-pub:hover {
         background: rgba(128,128,128,0.1);
+        text-decoration: none;
     }
 </style>

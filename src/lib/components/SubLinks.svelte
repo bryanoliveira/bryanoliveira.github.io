@@ -43,7 +43,7 @@ L45.056,102.4H432.811z M443.733,375.467h-409.6V137.062L228.54,286.6c6.13,4.707,1
             />
         </svg>
     </a>
-    <a href="/pdfs/cv.pdf" target="_blank" title="Curriculum Vitae" style="font-size: 1.4rem; vertical-align: middle; text-decoration: none;">📄</a>
+    <a href="/pdfs/cv.pdf" target="_blank" title="Curriculum Vitae" style="font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; vertical-align: middle; text-decoration: none; border: 1px solid currentColor; border-radius: 4px; padding: 2px 7px;">CV</a>
 </div>
 
 <style>

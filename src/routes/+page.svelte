@@ -10,7 +10,7 @@
         other: 'Other',
     }
     const tab_all = 'other'
-    let active_tab = 'featured'
+    let active_tab = 'publications'
 
     // Lazy load state for "All" tab
     const BATCH_SIZE = 5
