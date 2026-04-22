@@ -11,9 +11,9 @@ urls:
     ]
 type: 'Workshop on RL4RS @ RLC 2025'
 tags: ['research', 'featured', 'publication']
-venue: 'RLC 2025 Workshop (Oral)'
-oral: true
-authors: 'B. Brandão, L. G. B. Martins, Bryan L. M. de Oliveira, L. C. Melo, M. L. da Luz, E. A. S. Garcia, M. V. da Silva, R. G. Avelar, A. R. G. Filho, A. S. Soares, T. W. L. Soares'
+venue: 'RLC 2025 — Workshop on Practical Insights into RL for Real-World Systems'
+oral: false
+authors: 'B Brandão, LGB Martins, BLM de Oliveira, LC Melo, ML da Luz, E Garcia, et al.'
 image: '/img/recovery_traffic_percentage.jpg'
 description: 'Offline RL with LTV-based rewards and bandit orchestration at a large financial institution improved collection values.'
 ---

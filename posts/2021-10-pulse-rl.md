@@ -13,9 +13,9 @@ urls:
     ]
 type: 'Workshop on Offline RL @ NeurIPS 2021'
 tags: ['research', 'publication', 'featured']
-venue: 'NeurIPS 2021 Offline RL Workshop (Oral)'
+venue: 'NeurIPS 2021 — 2nd Offline RL Workshop (Oral)'
 oral: true
-authors: 'Bryan L. M. de Oliveira*, L. G. B. Martins*, M. Santana, D. W. Soares, T. W. L. Soares (* equal contribution)'
+authors: 'LC Melo, LGB Martins, BLM de Oliveira, B Brandão, DW Soares, et al.'
 image: '/img/pulserl.png'
 description: 'PulseRL is an offline reinforcement learning system for optimizing communication channels in Digital Marketing Systems (DMS) using Conservative Q-Learning (CQL). It learns from historical data, avoiding costly interactions, and reduces bias from out-of-distribution actions. PulseRL outperformed RL baselines in real-world DMS experiments, proving its effectiveness at scale.'
 ---

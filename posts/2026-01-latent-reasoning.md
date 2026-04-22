@@ -1,16 +1,16 @@
 ---
-title: 'Partial Reasoning: Exploring the Benefits of Incomplete Thinking in Language Models'
+title: 'Partial Reasoning in Language Models: Search and Refinement Guided by Uncertainty'
 slug: '2026-01-latent-reasoning'
-date: '2026-01-15'
+date: '2026-01-27'
 urls: ['https://arxiv.org/abs/2601.12040']
 arxiv: '2601.12040'
 type: 'Workshop Paper'
 tags: ['publication', 'llm', 'reasoning', 'research']
-venue: 'AAAI 2026 LaCATODA Workshop'
+venue: 'AAAI 2026 — LaCATODA Workshop'
 oral: false
-authors: 'Bryan L. M. de Oliveira, L. G. B. Martins, T. W. L. Soares'
+authors: 'M da Luz, B Brandão, L Martins, G Oliveira, B de Oliveira, L Melo, et al.'
 image: '/img/placeholder.png'
-description: 'We explore the effects of truncating chain-of-thought reasoning in language models, finding that partial reasoning can preserve task performance while reducing computational cost.'
+description: 'We propose partial reasoning in language models guided by uncertainty, using search and refinement to selectively truncate chain-of-thought while preserving performance.'
 ---
 
-We explore the benefits of partial or incomplete chain-of-thought reasoning in large language models. Our findings suggest that truncating reasoning chains can preserve downstream task performance while substantially reducing computational cost, with implications for efficient deployment of reasoning-capable models.
+We propose a partial reasoning framework for language models where search and refinement are guided by uncertainty estimates, selectively truncating chain-of-thought reasoning while preserving downstream task performance.

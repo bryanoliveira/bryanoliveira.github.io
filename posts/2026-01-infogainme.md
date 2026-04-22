@@ -1,16 +1,16 @@
 ---
-title: 'Do Reasoning Models Show Theory of Mind? InfoGainme: A Multi-Turn Benchmark for Information-Seeking Dialogue'
+title: 'Do Reasoning Models Ask Better Questions? A Formal Information-Theoretic Analysis on Multi-Turn LLM Games'
 slug: '2026-01-infogainme'
-date: '2026-01-01'
+date: '2026-01-26'
 urls: ['https://arxiv.org/abs/2601.17716']
 arxiv: '2601.17716'
-type: 'Preprint'
-tags: ['publication', 'highlight', 'nlp', 'information-seeking', 'llm', 'research']
-venue: 'arXiv preprint (work-in-progress)'
+type: 'Workshop Paper'
+tags: ['publication', 'nlp', 'information-seeking', 'llm', 'research']
+venue: 'AAAI 2026 — NeusymBridge Workshop'
 oral: false
-authors: 'Bryan L. M. de Oliveira, D. M. Pedrozo, L. G. B. Martins, T. W. L. Soares'
+authors: 'DM Pedrozo, TWL Soares, BLM de Oliveira'
 image: '/img/placeholder.png'
-description: 'InfoGainme: a multi-turn benchmark for evaluating information-seeking behavior in dialogue agents, testing whether reasoning models can ask optimal questions under uncertainty.'
+description: 'A formal information-theoretic analysis on multi-turn LLM games evaluating whether reasoning models ask better questions than standard models.'
 ---
 
-We introduce InfoGainme, a multi-turn benchmark for evaluating information-seeking behavior in dialogue agents. Our framework tests whether language models can ask optimal questions to maximize information gain under uncertainty — a key capability for autonomous agents operating in partially observable environments.
+We present a formal information-theoretic analysis of multi-turn LLM games, studying whether reasoning-capable models ask better questions than standard language models under uncertainty.

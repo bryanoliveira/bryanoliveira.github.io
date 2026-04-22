@@ -6,11 +6,10 @@
     import PublicationListItem from '$lib/components/PublicationListItem.svelte'
 
     const tabs = {
-        featured: 'Featured',
         publications: 'Publications',
-        all: 'All',
+        other: 'Other',
     }
-    const tab_all = 'all'
+    const tab_all = 'other'
     let active_tab = 'featured'
 
     // Lazy load state for "All" tab
@@ -20,8 +19,9 @@
     let observer
 
     $: allPosts = data.posts
-    $: visibleAllPosts = allPosts.slice(0, visibleCount)
-    $: hasMore = visibleCount < allPosts.length
+    $: otherPosts = allPosts.filter(p => !p.tags.includes('publication'))
+    $: visibleAllPosts = otherPosts.slice(0, visibleCount)
+    $: hasMore = visibleCount < otherPosts.length
 
     // Reset visible count when switching to "All" tab
     $: if (active_tab === tab_all) {
@@ -126,13 +126,7 @@
         </ul>
     </div>
     <div class="mt-4 pt-3 text-justify">
-        {#if active_tab === 'featured'}
-            {#each data.posts as post}
-                {#if post.tags.includes("highlight")}
-                    <PostListItem {post} />
-                {/if}
-            {/each}
-        {:else if active_tab === 'publications'}
+        {#if active_tab === 'publications'}
             {#each data.posts as post}
                 {#if post.tags.includes("publication")}
                     <PublicationListItem {post} />
@@ -140,7 +134,9 @@
             {/each}
         {:else}
             {#each visibleAllPosts as post}
-                <PostListItem {post} />
+                {#if !post.tags.includes("publication")}
+                    <PostListItem {post} />
+                {/if}
             {/each}
             {#if hasMore}
                 <div bind:this={sentinel} class="sentinel"></div>
