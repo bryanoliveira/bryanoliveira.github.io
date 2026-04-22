@@ -202,7 +202,7 @@
         margin: 0.75rem 0;
     }
     .research-tile {
-        color: #888;
+        color: #555;
         font-size: 0.9rem;
         white-space: nowrap;
     }

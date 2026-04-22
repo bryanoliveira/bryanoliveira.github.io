@@ -71,5 +71,14 @@ L45.056,102.4H432.811z M443.733,375.467h-409.6V137.062L228.54,286.6c6.13,4.707,1
         letter-spacing: 0.04em;
         vertical-align: middle;
         text-decoration: none;
+        color: inherit !important;
+        opacity: 0.6;
+    }
+    .cv-link:hover {
+        opacity: 0.8;
+        color: inherit !important;
+    }
+    .cv-link::before {
+        display: none !important;
     }
 </style>

@@ -15,8 +15,8 @@ urls:
     ]
 type: 'Workshop on SSI-FM @ ICLR 2025'
 tags: ['research', 'featured', 'publication']
-venue: 'ICLR 2025 — Workshop on Scaling Self-Improving Foundation Models Without Human Supervision (also presented at RLC 2025)'
-oral: false
+venue: 'RLC 2025 — RLBrew Workshop'
+oral: true
 authors: 'BLM de Oliveira, LGB Martins, B Brandão, LC Melo'
 arxiv: '2502.12257'
 image: '/img/infoquest_cover.png'

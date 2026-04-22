@@ -118,12 +118,17 @@
         border-radius: 4px;
         padding: 0.15rem 0.55rem;
         text-decoration: none;
-        margin-right: 0.35rem;
-        color: inherit;
-        display: inline-block;
+        color: inherit !important;
+        display: inline-block !important;
+        width: auto !important;
+        position: static !important;
+    }
+    .btn-pub::before {
+        display: none !important;
     }
     .btn-pub:hover {
         background: rgba(128,128,128,0.1);
         text-decoration: none;
+        color: inherit !important;
     }
 </style>
