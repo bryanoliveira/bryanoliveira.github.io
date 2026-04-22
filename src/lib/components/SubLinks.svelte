@@ -43,6 +43,7 @@ L45.056,102.4H432.811z M443.733,375.467h-409.6V137.062L228.54,286.6c6.13,4.707,1
             />
         </svg>
     </a>
+    <a href="/pdfs/cv.pdf" target="_blank" title="Curriculum Vitae" style="font-size: 1.4rem; vertical-align: middle; text-decoration: none;">📄</a>
 </div>
 
 <style>

@@ -3,9 +3,11 @@
     export let data
     import SubLinks from '$lib/components/SubLinks.svelte'
     import PostListItem from '$lib/components/PostListItem.svelte'
+    import PublicationListItem from '$lib/components/PublicationListItem.svelte'
 
     const tabs = {
         featured: 'Featured',
+        publications: 'Publications',
         all: 'All',
     }
     const tab_all = 'all'
@@ -80,37 +82,29 @@
                 alt="Bryan de Oliveira"
                 align="left"
             />
-            Hi! I'm Bryan, a {new Date().getFullYear() - 1997}-year-old AI researcher based in Goiânia, Brazil. 
-            I recently completed my Master's degree in Computer Science from the
-            <a href="https://international.ufg.br/" target="_blank">Federal University of Goiás</a>, 
-            specializing in Deep Reinforcement Learning with a publication at <a href="https://icml.cc/virtual/2025/poster/43653" target="_blank">ICML 2025</a>. 
-            I am actively seeking PhD opportunities to advance cutting-edge research in AI and RL towards developing generalist agents that learn from experience.
+            Hi! I'm Bryan, a {new Date().getFullYear() - 1997}-year-old AI researcher and PhD Student in Computer Science at the <a href="https://international.ufg.br/" target="_blank">Federal University of Goiás (UFG)</a>, based in Goiânia, Brazil. I work at <a href="https://ceia.ufg.br" target="_blank">CEIA</a> and <a href="https://akcit.ufg.br/" target="_blank">AKCIT</a>, where I lead interdisciplinary research teams at the intersection of Deep Reinforcement Learning and decision-making under uncertainty, with a publication at <a href="https://icml.cc/virtual/2025/poster/43653" target="_blank">ICML 2025</a>.
         </p>
         <!-- What I do -->
         <p>
-            I currently work at the <a
-                href="https://ceia.ufg.br"
-                target="_blank">Center of Excellence in Artificial Intelligence (CEIA)</a
-            > and the <a href="https://akcit.ufg.br/" target="_blank">Advanced Knowledge Center for Immersive Technologies (AKCIT)</a>,
-            where I lead interdisciplinary teams on cutting-edge AI R&D projects. My current work focuses on LLM training 
-            and evaluation through reinforcement learning, emphasizing reasoning, tool use, information-seeking behavior, 
-            interpretability, and steerability. I also explore LLM-based multi-agent systems, investigating evolutionary search, 
-            computer use, and implicit feedback mechanisms. My approach combines theoretical advances in Deep RL with practical applications, 
-            bridging the gap between academic innovation and real-world deployment.
+            My research centers on agents that make good decisions under uncertainty — combining Deep RL, information-seeking behavior, and Bayesian methods. I lead four research sub-teams at AKCIT: <strong>InfoGainme</strong> (dialogue agents for optimal question-asking, <a href="https://arxiv.org/abs/2601.17716" target="_blank">arXiv:2601.17716</a>), <strong>GRPO vs PPO</strong> (empirical study of policy gradient methods, <a href="https://arxiv.org/abs/2511.03527" target="_blank">arXiv:2511.03527</a>), <strong>Embodied Agents</strong> (LLM-based planning under uncertainty), and <strong>Autonomous Humanoids</strong> (teleoperation and sim-to-real transfer). I also lead applied R&amp;D projects with industry partners through CEIA: CEMIG, HUG Labs, bettrAds, Recovery/Itaú, and Bancorbrás.
         </p>
         <!-- Research focus and experience -->
         <p>
-            My research expertise spans Deep Reinforcement Learning, with particular focus on representation learning, model-based RL, and industry applications 
-            in pricing optimization and recommender systems. I have proven ability to structure and execute complex R&D projects from 
-            conception to publication, complemented by extensive engineering experience in developing and deploying ML systems. This background provides me with unique 
-            insights into both the theoretical foundations and practical constraints of AI systems.
+            My research expertise spans Deep Reinforcement Learning, representation learning, world models, and autonomous decision-making. I have proven ability to structure and execute complex R&amp;D projects from conception to publication, complemented by extensive engineering experience in developing and deploying ML systems at scale. This background provides unique insights into both the theoretical foundations and practical constraints of AI systems.
         </p>
         <!-- Vision and interests -->
         <p>
-            I'm deeply interested in the fundamental questions of artificial intelligence, neuroscience, and their interconnections, 
-            particularly in how we can develop AI systems that learn better representations and leverage world models to effectively plan and adapt. I believe in a principled, interdisciplinary 
-            approach to AI research that combines theory with rigorous empirical validation and real-world impact.
+            I'm deeply interested in the fundamental questions of artificial intelligence and neuroscience — particularly how we can develop AI systems that learn better representations and world models to effectively plan and adapt in uncertain environments. I believe in a principled, interdisciplinary approach to AI research that combines theory with rigorous empirical validation and real-world impact.
         </p>
+    </div>
+</div>
+
+<div id="research-interests" class="mt-4 text-center">
+    <div class="research-tiles">
+        <span class="research-tile">🎲 Decision Making Under Uncertainty</span>
+        <span class="research-tile">🦾 Robotics &amp; Embodied AI</span>
+        <span class="research-tile">🤖 Deep Reinforcement Learning</span>
+        <span class="research-tile">🧠 LLM Post-Training &amp; Alignment</span>
     </div>
 </div>
 
@@ -132,10 +126,16 @@
         </ul>
     </div>
     <div class="mt-4 pt-3 text-justify">
-        {#if active_tab != tab_all}
+        {#if active_tab === 'featured'}
             {#each data.posts as post}
                 {#if post.tags.includes("highlight")}
                     <PostListItem {post} />
+                {/if}
+            {/each}
+        {:else if active_tab === 'publications'}
+            {#each data.posts as post}
+                {#if post.tags.includes("publication")}
+                    <PublicationListItem {post} />
                 {/if}
             {/each}
         {:else}
@@ -145,13 +145,6 @@
             {#if hasMore}
                 <div bind:this={sentinel} class="sentinel"></div>
             {/if}
-        {/if}
-        {#if active_tab != tab_all}
-            {#each data.posts as post}
-                {#if post.tags.includes(active_tab) && !post.tags.includes("highlight")}
-                    <PostListItem {post} />
-                {/if}
-            {/each}
         {/if}
     </div>
 </div>
@@ -200,5 +193,21 @@
 
     .sentinel {
         height: 1px;
+    }
+
+    .research-tiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 0.75rem 0;
+    }
+    .research-tile {
+        background: rgba(128, 128, 128, 0.1);
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        border-radius: 20px;
+        padding: 0.3rem 0.9rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
     }
 </style>

@@ -14,7 +14,11 @@ urls:
         },
     ]
 type: 'Workshop on SSI-FM @ ICLR 2025'
-tags: ['research', 'featured']
+tags: ['research', 'featured', 'publication']
+venue: 'RLC 2025 RLBrew Workshop (Oral)'
+oral: true
+authors: 'Bryan L. M. de Oliveira, D. M. Pedrozo, L. G. B. Martins, T. W. L. Soares'
+arxiv: '2502.12257'
 image: '/img/infoquest_cover.png'
 description: 'A benchmark for evaluating how LLMs handle ambiguous open-ended requests through dialogue, revealing that current models struggle to ask effective clarifying questions.'
 ---
