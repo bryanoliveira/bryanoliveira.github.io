@@ -8,7 +8,7 @@ type: 'Workshop Paper'
 tags: ['publication', 'llm', 'reasoning', 'research']
 venue: 'AAAI 2026 — LaCATODA Workshop'
 oral: false
-authors: 'M da Luz, B Brandão, L Martins, G Oliveira, B de Oliveira, L Melo, et al.'
+authors: 'ML da Luz, B Brandão, LGB Martins, G Oliveira, BLM de Oliveira, LC Melo, et al.'
 image: '/img/placeholder.png'
 description: 'We propose partial reasoning in language models guided by uncertainty, using search and refinement to selectively truncate chain-of-thought while preserving performance.'
 ---

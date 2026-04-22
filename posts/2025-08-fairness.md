@@ -7,7 +7,7 @@ type: 'Workshop Paper'
 tags: ['publication', 'research', 'rl']
 venue: 'RLC 2025 — Workshop on Practical Insights into RL for Real-World Systems'
 oral: false
-authors: 'LGB Martins, BLM de Oliveira, B Brandão, TW de Lima Soares, et al.'
+authors: 'LGB Martins, BLM de Oliveira, B Brandão, TWL Soares, et al.'
 image: '/img/placeholder.png'
 description: 'We propose an adaptive RL approach for recommender systems that personalizes fairness based on user diversity preferences.'
 ---
