@@ -102,8 +102,11 @@
 <div id="research-interests" class="mt-4 text-center">
     <div class="research-tiles">
         <span class="research-tile">🎲 Decision Making Under Uncertainty</span>
+        <span class="research-tile">·</span>
         <span class="research-tile">🦾 Robotics &amp; Embodied AI</span>
+        <span class="research-tile">·</span>
         <span class="research-tile">🤖 Deep Reinforcement Learning</span>
+        <span class="research-tile">·</span>
         <span class="research-tile">🧠 LLM Post-Training &amp; Alignment</span>
     </div>
 </div>
@@ -195,15 +198,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
         margin: 0.75rem 0;
     }
     .research-tile {
-        background: rgba(128, 128, 128, 0.1);
-        border: 1px solid rgba(128, 128, 128, 0.2);
-        border-radius: 20px;
-        padding: 0.3rem 0.9rem;
-        font-size: 0.95rem;
+        color: #888;
+        font-size: 0.9rem;
         white-space: nowrap;
     }
 </style>

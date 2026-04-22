@@ -108,6 +108,9 @@
     }
     .pub-links {
         margin-top: 0.3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
     }
     .btn-pub {
         font-size: 0.8rem;
