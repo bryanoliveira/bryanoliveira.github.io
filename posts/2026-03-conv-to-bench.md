@@ -8,7 +8,7 @@ tags: ['publication', 'llm', 'benchmark', 'evaluation', 'research']
 venue: 'ICLR 2026 — DATA-FM Workshop'
 oral: false
 authors: 'VM dos Santos, AC Castro, SLS Toledo, BML Calura, LCM Menezes, RCR Mata, TWL Soares, BLM de Oliveira'
-image: '/img/placeholder.png'
+image: '/img/papers/2026-03-conv-to-bench.png'
 description: 'CONV-TO-BENCH creates evaluation benchmarks from raw user–assistant interaction logs in code tasks, enabling model assessment on realistic multi-turn dialogue data.'
 ---
 

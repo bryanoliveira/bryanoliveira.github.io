@@ -107,28 +107,15 @@
         letter-spacing: 0.03em;
     }
     .pub-links {
-        margin-top: 0.3rem;
+        margin-top: 0.5rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 0.3rem;
+        gap: 0.6rem;
     }
     .btn-pub {
-        font-size: 0.8rem;
-        border: 1px solid rgba(128,128,128,0.45);
-        border-radius: 4px;
-        padding: 0.15rem 0.55rem;
-        text-decoration: none;
-        color: inherit !important;
+        font-size: 0.85rem;
         display: inline-block !important;
         width: auto !important;
-        position: static !important;
-    }
-    .btn-pub::before {
-        display: none !important;
-    }
-    .btn-pub:hover {
-        background: rgba(128,128,128,0.1);
-        text-decoration: none;
-        color: inherit !important;
+        position: relative !important;
     }
 </style>

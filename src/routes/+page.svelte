@@ -99,18 +99,6 @@
     </div>
 </div>
 
-<div id="research-interests" class="mt-4 text-center">
-    <div class="research-tiles">
-        <span class="research-tile">🎲 Decision Making Under Uncertainty</span>
-        <span class="research-tile">·</span>
-        <span class="research-tile">🦾 Robotics &amp; Embodied AI</span>
-        <span class="research-tile">·</span>
-        <span class="research-tile">🤖 Deep Reinforcement Learning</span>
-        <span class="research-tile">·</span>
-        <span class="research-tile">🧠 LLM Post-Training &amp; Alignment</span>
-    </div>
-</div>
-
 <div id="portfolio" class="mt-5 pt-4">
     <div id="portfolio-nav" class="text-center">
         <ul class="nav nav-tabs nav-fill no-underline">
@@ -192,18 +180,5 @@
 
     .sentinel {
         height: 1px;
-    }
-
-    .research-tiles {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.4rem;
-        margin: 0.75rem 0;
-    }
-    .research-tile {
-        color: #555;
-        font-size: 0.9rem;
-        white-space: nowrap;
     }
 </style>

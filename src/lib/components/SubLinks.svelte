@@ -43,7 +43,11 @@ L45.056,102.4H432.811z M443.733,375.467h-409.6V137.062L228.54,286.6c6.13,4.707,1
             />
         </svg>
     </a>
-    <a href="/pdfs/cv.pdf" target="_blank" title="Curriculum Vitae" class="cv-link">CV</a>
+    <a href="/pdfs/cv.pdf" target="_blank" title="Curriculum Vitae" class="cv-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6zm2-5h8v1.5H8V15zm0-3h8v1.5H8V12zm0-3h4v1.5H8V9z"/>
+        </svg>
+    </a>
 </div>
 
 <style>
@@ -66,16 +70,15 @@ L45.056,102.4H432.811z M443.733,375.467h-409.6V137.062L228.54,286.6c6.13,4.707,1
         height: 20px;
     }
     .cv-link {
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.04em;
         vertical-align: middle;
         text-decoration: none;
-        color: inherit !important;
-        opacity: 0.6;
+    }
+    .cv-link svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
     }
     .cv-link:hover {
-        opacity: 0.8;
         color: inherit !important;
     }
     .cv-link::before {
