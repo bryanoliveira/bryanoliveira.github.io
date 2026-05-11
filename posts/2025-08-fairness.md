@@ -5,6 +5,7 @@ date: '2025-08-05'
 urls: ['https://openreview.net/forum?id=p9ACyszcwf']
 type: 'Workshop Paper'
 tags: ['publication', 'research', 'rl']
+label: 'Applied RL'
 venue: 'RLC 2025 — Workshop on Practical Insights into RL for Real-World Systems'
 oral: false
 authors: 'LGB Martins, BLM de Oliveira, B Brandão, TWL Soares, et al.'

@@ -6,6 +6,7 @@ urls: ['https://arxiv.org/abs/2601.12040']
 arxiv: '2601.12040'
 type: 'Workshop Paper'
 tags: ['publication', 'llm', 'reasoning', 'research']
+label: 'RL under Uncertainty'
 venue: 'AAAI 2026 — LaCATODA Workshop'
 oral: false
 authors: 'ML da Luz, B Brandão, LGB Martins, G Oliveira, BLM de Oliveira, LC Melo, et al.'

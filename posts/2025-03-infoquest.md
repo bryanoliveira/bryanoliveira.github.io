@@ -15,6 +15,7 @@ urls:
     ]
 type: 'Workshop on SSI-FM @ ICLR 2025'
 tags: ['research', 'featured', 'publication']
+label: 'RL under Uncertainty'
 venue: 'RLC 2025 — RLBrew Workshop'
 oral: true
 authors: 'BLM de Oliveira, LGB Martins, B Brandão, LC Melo'

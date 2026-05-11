@@ -5,6 +5,7 @@ date: '2026-04-17'
 urls: ['https://openreview.net/forum?id=PmkOtKBMr0']
 type: 'Workshop Paper'
 tags: ['publication', 'llm', 'benchmark', 'evaluation', 'research']
+label: 'Benchmark Design'
 venue: 'ICLR 2026 — DATA-FM Workshop'
 oral: false
 authors: 'VM dos Santos, AC Castro, SLS Toledo, BML Calura, LCM Menezes, RCR Mata, TWL Soares, BLM de Oliveira'

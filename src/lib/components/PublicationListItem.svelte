@@ -51,6 +51,9 @@
         <small class="text-muted">
             {post.venue || post.type} · {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
         </small>
+        {#if post.label}
+            <span class="badge-label">{post.label}</span>
+        {/if}
         {#if post.authors}
             <p class="pub-authors">{@html boldName(post.authors)}</p>
         {/if}
@@ -93,6 +96,18 @@
         font-size: 0.9rem;
         color: #666;
         margin: 0.2rem 0 0.1rem;
+    }
+    .badge-label {
+        display: inline-block;
+        background: #e8f0fe;
+        color: #1a56db;
+        border-radius: 4px;
+        padding: 0.1rem 0.5rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        margin-top: 0.3rem;
+        margin-bottom: 0.1rem;
     }
     .badge-oral {
         background: #d4edda;

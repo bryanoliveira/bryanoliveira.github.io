@@ -10,6 +10,7 @@ urls:
 arxiv: '2601.17716'
 type: 'Workshop Paper'
 tags: ['publication', 'nlp', 'information-seeking', 'llm', 'research']
+label: 'RL under Uncertainty'
 venue: 'AAAI 2026 — NeusymBridge Workshop'
 oral: false
 authors: 'DM Pedrozo, TWL Soares, BLM de Oliveira'

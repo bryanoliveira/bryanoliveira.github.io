@@ -10,7 +10,7 @@ urls:
         },
     ]
 type: 'Undergraduate Thesis'
-tags: ['research', 'publication']
+tags: ['research']
 image: '/img/pick.gif'
 description: 'Intrinsic motivation for robotic manipulation learning with sparse rewards - Study of the impact of curiosity and intrinsic motivation as an exploration strategy for deep reinforcement learning agents on sparse-reward robotic manipulator environments.'
 ---
