@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-169339523-1"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'UA-169339523-1')
+        </script>
+
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="author" content="Bryan Oliveira" />
+        <meta name="theme-color" content="#FFFFFF" />
+
+        <title>Bryan Oliveira</title>
+
+        <link
+            rel="manifest"
+            href="/manifest.json"
+            crossorigin="use-credentials"
+        />
+        <link rel="icon" type="image/png" href="/img/icon.png" />
+        <!-- Bootstrap core CSS -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css"
+        />
+        <link rel="stylesheet" href="/css/fonts.css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/global.css" />
+
+        
+		<link href="../_app/immutable/assets/0.DmDf05yZ.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.BKVJRGVn.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/HorizontalNamePhoto.DjXVG2lA.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.B04duy-5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.BRjXrxru.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.BtnhMvY2.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.CkZncjha.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.CQqpTsnc.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.usz_PnH-.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.DzgwWu8m.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.D6YF6ztN.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/HorizontalNamePhoto.D89OtyLT.js"><title>Multiagent Soccer Environment for Python</title><!-- HEAD_svelte-1y6vo8x_START --><link rel="canonical" href="https://bryanoliveira.github.io/blog/2021-09-05-soccer-twos-env"><meta name="Description" content="A pre-compiled Soccer-Twos environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of Unity ML Agents to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil."><meta property="og:type" content="article"><meta property="og:title" content="Multiagent Soccer Environment for Python"><meta property="og:url" content="https://bryanoliveira.github.io/blog/2021-09-05-soccer-twos-env"><meta property="og:description" content="A pre-compiled Soccer-Twos environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of Unity ML Agents to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil."><meta property="og:image" content="/img/soccer.gif"><meta name="image" content="/img/soccer.gif"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:domain" value="bryanoliveira.github.io"><meta name="twitter:creator" value="bryanoliveira_"><meta name="twitter:title" value="Multiagent Soccer Environment for Python"><meta name="twitter:description" content="A pre-compiled Soccer-Twos environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of Unity ML Agents to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil."><meta name="twitter:image" content="/img/soccer.gif"><meta name="twitter:label1" value="Published on"><meta name="twitter:data1" value="Sep 5, 2021"><meta name="twitter:label2" value="Reading Time"><meta name="twitter:data2" value="6 min read"><!-- HEAD_svelte-1y6vo8x_END -->
+    </head>
+
+    <body>
+        <div id="app">  <div class="cover-container d-flex w-100 p-3 mx-auto flex-column mt-5 svelte-e1wq04"><main class="cover mb-5 svelte-e1wq04"> <a href="/blog" class="back" data-svelte-h="svelte-md5nuv">« posts</a> <div class="mt-5 mb-5 text-center"><h1>Multiagent Soccer Environment for Python</h1> <div class="mt-4 text-muted">Reinforcement Learning Environment ·
+        <span title="9/5/2021">September 2021</span>
+        · 6 min read</div></div> <div class="row"><div class="col-md-8"><p><!-- HTML_TAG_START -->A pre-compiled Soccer-Twos environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of Unity ML Agents to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil.<!-- HTML_TAG_END --></p> <div class="mb-3 text-center text-md-left"><a href="https://pypi.org/project/soccer-twos/" class="btn btn-sm btn-secondary mr-1 no-underline mb-1" target="_blank">Python Package ⧉
+                </a><a href="https://github.com/bryanoliveira/soccer-twos-env" class="btn btn-sm btn-secondary mr-1 no-underline mb-1" target="_blank">Environment Code ⧉
+                </a><a href="https://github.com/bryanoliveira/unity-soccer" class="btn btn-sm btn-secondary mr-1 no-underline mb-1" target="_blank">Simulator Code ⧉
+                </a></div></div> <div class="col-md-4"><img src="/img/soccer.gif" alt="Multiagent Soccer Environment for Python" class="cover-img svelte-1vtgaev"></div></div> <hr> <div class="post svelte-1vtgaev"><!-- HTML_TAG_START --><p>A pre-compiled <a href="https://github.com/Unity-Technologies/ml-agents/blob/92ff2c26fef7174b443115454fa1c6045d622bc2/docs/Learning-Environment-Examples.md#soccer-twos">Soccer-Twos</a> environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of <a href="https://github.com/Unity-Technologies/ml-agents">Unity ML Agents</a> to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil.</p>
+<div align="center">
+    <img class="text-img mw-100" src="/img/soccer.gif">
+</div>
+<br/>
+
+<p>Pre-compiled versions of this environment are available for Linux, Windows and MacOS (x86, 64 bits). The source code for this environment is available <a href="https://github.com/bryanoliveira/unity-soccer">here</a>.</p>
+<h2>Requirements</h2>
+<p>See <a href="https://github.com/bryanoliveira/soccer-twos-env/blob/master/requirements.txt">requirements.txt</a>.</p>
+<h2>Usage</h2>
+<h3>For training</h3>
+<p>Import this package and instantiate the environment:</p>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> soccer_twos
+
+env = soccer_twos.make()
+</code></pre><p>The <code>make</code> method accepts several options:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>render</code></td>
+<td>Whether to render the environment. Defaults to <code>False</code>.</td>
+</tr>
+<tr>
+<td><code>watch</code></td>
+<td>Whether to run an audience-friendly version the provided Soccer-Twos environment. Forces <code>render</code> to <code>True</code>, <code>time_scale</code> to <code>1</code> and <code>quality_level</code> to <code>5</code>. Has no effect when <code>env_path</code> is set. Defaults to <code>False</code>.</td>
+</tr>
+<tr>
+<td><code>variation</code></td>
+<td>A soccer env variation in EnvType. Defaults to <code>EnvType.multiagent_player</code></td>
+</tr>
+<tr>
+<td><code>blue_team_name</code></td>
+<td>The name of the blue team. Defaults to &quot;BLUE&quot;.</td>
+</tr>
+<tr>
+<td><code>orange_team_name</code></td>
+<td>The name of the orange team. Defaults to &quot;ORANGE&quot;.</td>
+</tr>
+<tr>
+<td><code>env_channel</code></td>
+<td>The side channel to use for communication with the environment. Defaults to None.</td>
+</tr>
+<tr>
+<td><code>time_scale</code></td>
+<td>The time scale to use for the environment. This should be less than <code>100</code>x for better simulation accuracy. Defaults to <code>20</code>x realtime.</td>
+</tr>
+<tr>
+<td><code>quality_level</code></td>
+<td>The quality level to use when rendering the environment. Ranges between <code>0</code> (lowest) and <code>5</code> (highest). Defaults to <code>0</code>.</td>
+</tr>
+<tr>
+<td><code>base_port</code></td>
+<td>The base port to use to communicate with the environment. Defaults to <code>50039</code>.</td>
+</tr>
+<tr>
+<td><code>worker_id</code></td>
+<td>Used as base port shift to avoid communication conflicts. Defaults to <code>0</code>.</td>
+</tr>
+<tr>
+<td><code>env_path</code></td>
+<td>The path to the environment executable. Overrides <code>watch</code>. Defaults to the provided Soccer-Twos environment.</td>
+</tr>
+<tr>
+<td><code>flatten_branched</code></td>
+<td>If <code>True</code>, turn branched discrete action spaces into a <code>Discrete</code> space rather than <code>MultiDiscrete</code>. Defaults to <code>False</code>.</td>
+</tr>
+<tr>
+<td><code>opponent_policy</code></td>
+<td>The policy to use for the opponent when <code>variation==team_vs_policy</code>. Defaults to a random agent.</td>
+</tr>
+<tr>
+<td><code>single_player</code></td>
+<td>Whether to let the agent control a single player, while the other stays still. Only works when <code>variation==team_vs_policy</code>. Defaults to <code>False</code>.</td>
+</tr>
+</tbody></table>
+<p>The created <code>env</code> exposes a basic <a href="https://gym.openai.com/">Gym</a> interface.
+Namely, the methods <code>reset()</code>, <code>step(action: Dict[int, np.ndarray])</code> and <code>close()</code> are available.
+The <code>render()</code> method has currently no effect and <code>soccer_twos.make(render=True)</code> should be used instead.
+The <code>step()</code> method returns extra information about the player and the ball in the last tuple element. This extra information includes position (x, y) and velocity (x, y) for the ball and players and y rotation (in degrees) of the players.</p>
+<p>We expose an RLLib-compatible multiagent interface.
+This means, for example, that <code>action</code> should be a <code>dict</code> where keys are integers in <code>{0, 1, 2, 3}</code> corresponding to each agent.
+Additionally, values should be single actions shaped like <code>env.action_space.shape</code>.
+Observations and rewards follow the same structure. Dones are only set for the key <code>__all__</code>, which means &quot;all agents&quot;.
+Agents 0 and 1 correspond to the blue team and agents 2 and 3 correspond to the orange team.</p>
+<p>Here&#39;s a full example:</p>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> soccer_twos
+
+env = soccer_twos.make(render=<span class="hljs-literal">True</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Observation Space: &quot;</span>, env.observation_space.shape)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Action Space: &quot;</span>, env.action_space.shape)
+
+team0_reward = <span class="hljs-number">0</span>
+team1_reward = <span class="hljs-number">0</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    obs, reward, done, info = env.step(
+        {
+            <span class="hljs-number">0</span>: env.action_space.sample(),
+            <span class="hljs-number">1</span>: env.action_space.sample(),
+            <span class="hljs-number">2</span>: env.action_space.sample(),
+            <span class="hljs-number">3</span>: env.action_space.sample(),
+        }
+    )
+
+    team0_reward += reward[<span class="hljs-number">0</span>] + reward[<span class="hljs-number">1</span>]
+    team1_reward += reward[<span class="hljs-number">2</span>] + reward[<span class="hljs-number">3</span>]
+    <span class="hljs-keyword">if</span> done[<span class="hljs-string">&quot;__all__&quot;</span>]:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Total Reward: &quot;</span>, team0_reward, <span class="hljs-string">&quot; x &quot;</span>, team1_reward)
+        team0_reward = <span class="hljs-number">0</span>
+        team1_reward = <span class="hljs-number">0</span>
+        env.reset()
+</code></pre><h4>Environment State Configuration</h4>
+<p>The <code>env_channel</code> parameter allows for state configuration inside the simulation. To use it, you must first instantiate a <code>soccer_twos.side_channels.EnvConfigurationChannel</code> and pass it in the <code>soccer_twos.make</code> call. Here&#39;s a full example:</p>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> soccer_twos
+<span class="hljs-keyword">from</span> soccer_twos.side_channels <span class="hljs-keyword">import</span> EnvConfigurationChannel
+env_channel = EnvConfigurationChannel()
+env = soccer_twos.make(env_channel=env_channel)
+env.reset()
+env_channel.set_parameters(
+    ball_state={
+        <span class="hljs-string">&quot;position&quot;</span>: [<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>],
+        <span class="hljs-string">&quot;velocity&quot;</span>: [-<span class="hljs-number">1.2</span>, <span class="hljs-number">3</span>],
+    },
+    players_states={
+        <span class="hljs-number">3</span>: {
+            <span class="hljs-string">&quot;position&quot;</span>: [-<span class="hljs-number">5</span>, <span class="hljs-number">10</span>],
+            <span class="hljs-string">&quot;rotation_y&quot;</span>: <span class="hljs-number">45</span>,
+            <span class="hljs-string">&quot;velocity&quot;</span>: [<span class="hljs-number">5</span>, <span class="hljs-number">0</span>],
+        }
+    }
+)
+<span class="hljs-comment"># env.step()</span>
+</code></pre><p>All the <code>env_channel.set_parameters</code> method parameters and dict keys are optional. You can set a single parameter at a time or the full game state if you need so.</p>
+<h3>Evaluating</h3>
+<p>To quickly evaluate one agent against another and generate comprehensive statistics, you may use the <code>evaluate</code> script:</p>
+<p><code>python -m soccer_twos.evaluate -m1 agent_module -m2 opponent_module</code></p>
+<p>You can also provide the <code>--episodes</code> option to specify the number of episodes to evaluate on (defaults to 100).</p>
+<h3>Watching</h3>
+<p>To rollout via CLI, you must create an implementation (subclass) of <code>soccer_twos.AgentInterface</code> and run:</p>
+<p><code>python -m soccer_twos.watch -m agent_module</code></p>
+<p>This will run a human-friendly version of the environment, where your agent will play against itself.
+You may instead use the options <code>-m1 agent_module -m2 opponent_module</code> to play against a different opponent.
+You may also implement your own rollout script using <code>soccer_twos.make(watch=True)</code>.</p>
+<div align="center">
+    <img class="text-img mw-100" src="https://raw.githubusercontent.com/bryanoliveira/soccer-twos-env/master/images/screenshot.png"/>
+</div>
+
+<h2>Environment Specs</h2>
+<p>This environment is based on Unity ML Agents&#39; <a href="https://github.com/Unity-Technologies/ml-agents/blob/92ff2c26fef7174b443115454fa1c6045d622bc2/docs/Learning-Environment-Examples.md#soccer-twos">Soccer Twos</a>, so most of the specs are the same. Here, four agents compete in a 2 vs 2 toy soccer game, aiming to get the ball into the opponent&#39;s goal while preventing the ball from entering own goal.</p>
+<div align="center">
+    <img class="text-img mw-100" src="https://raw.githubusercontent.com/bryanoliveira/soccer-twos-env/master/images/obs.png"/>
+</div>
+<br/>
+
+<ul>
+<li>Observation space: a 336-dimensional vector corresponding to 11 ray-casts forward distributed over 120 degrees and 3 ray-casts backward distributed over 90 degrees, each detecting 6 possible object types, along with the object&#39;s distance. The forward ray-casts contribute 264 state dimensions and backward 72 state dimensions over three observation stacks.</li>
+<li>Action space: 3 discrete branched actions (MultiDiscrete) corresponding to forward, backward, sideways movement, as well as rotation (27 discrete actions).</li>
+<li>Agent Reward Function:<ul>
+<li><code>1 - accumulated time penalty</code>: when ball enters opponent&#39;s goal. Accumulated time penalty is incremented by <code>(1 / MaxSteps)</code> every fixed update and is reset to 0 at the beginning of an episode. In this build, <code>MaxSteps = 5000</code>.</li>
+<li><code>-1</code>: when ball enters team&#39;s goal.</li>
+</ul>
+</li>
+</ul>
+<p>Note that while this is true when <code>variation == EnvType.multiagent_player</code>, observation and action spaces may vary for other variations.</p>
+<!-- HTML_TAG_END --></div> <hr> <footer class="text-center indicate_blank"><small class="text-muted horizontal-name-photo svelte-1sdunwv" data-svelte-h="svelte-15iou2v"><a href="." class="no-underline"><img src="/img/me.jpg" id="img-me" alt="Bryan Oliveira" class="svelte-1sdunwv"> <h2 class="svelte-1sdunwv">Bryan Oliveira</h2></a> </small> </footer></main> </div> 
+			
+			<script>
+				{
+					__sveltekit_5xl7q3 = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,{"type":"data","data":{post:{html:"\u003Cp>A pre-compiled \u003Ca href=\"https://github.com/Unity-Technologies/ml-agents/blob/92ff2c26fef7174b443115454fa1c6045d622bc2/docs/Learning-Environment-Examples.md#soccer-twos\">Soccer-Twos\u003C/a> environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of \u003Ca href=\"https://github.com/Unity-Technologies/ml-agents\">Unity ML Agents\u003C/a> to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil.\u003C/p>\n\u003Cdiv align=\"center\">\n    \u003Cimg class=\"text-img mw-100\" src=\"/img/soccer.gif\">\n\u003C/div>\n\u003Cbr/>\n\n\u003Cp>Pre-compiled versions of this environment are available for Linux, Windows and MacOS (x86, 64 bits). The source code for this environment is available \u003Ca href=\"https://github.com/bryanoliveira/unity-soccer\">here\u003C/a>.\u003C/p>\n\u003Ch2>Requirements\u003C/h2>\n\u003Cp>See \u003Ca href=\"https://github.com/bryanoliveira/soccer-twos-env/blob/master/requirements.txt\">requirements.txt\u003C/a>.\u003C/p>\n\u003Ch2>Usage\u003C/h2>\n\u003Ch3>For training\u003C/h3>\n\u003Cp>Import this package and instantiate the environment:\u003C/p>\n\u003Cpre>\u003Ccode class=\"language-python\">\u003Cspan class=\"hljs-keyword\">import\u003C/span> soccer_twos\n\nenv = soccer_twos.make()\n\u003C/code>\u003C/pre>\u003Cp>The \u003Ccode>make\u003C/code> method accepts several options:\u003C/p>\n\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Option\u003C/th>\n\u003Cth>Description\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Ccode>render\u003C/code>\u003C/td>\n\u003Ctd>Whether to render the environment. Defaults to \u003Ccode>False\u003C/code>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>watch\u003C/code>\u003C/td>\n\u003Ctd>Whether to run an audience-friendly version the provided Soccer-Twos environment. Forces \u003Ccode>render\u003C/code> to \u003Ccode>True\u003C/code>, \u003Ccode>time_scale\u003C/code> to \u003Ccode>1\u003C/code> and \u003Ccode>quality_level\u003C/code> to \u003Ccode>5\u003C/code>. Has no effect when \u003Ccode>env_path\u003C/code> is set. Defaults to \u003Ccode>False\u003C/code>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>variation\u003C/code>\u003C/td>\n\u003Ctd>A soccer env variation in EnvType. Defaults to \u003Ccode>EnvType.multiagent_player\u003C/code>\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>blue_team_name\u003C/code>\u003C/td>\n\u003Ctd>The name of the blue team. Defaults to &quot;BLUE&quot;.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>orange_team_name\u003C/code>\u003C/td>\n\u003Ctd>The name of the orange team. Defaults to &quot;ORANGE&quot;.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>env_channel\u003C/code>\u003C/td>\n\u003Ctd>The side channel to use for communication with the environment. Defaults to None.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>time_scale\u003C/code>\u003C/td>\n\u003Ctd>The time scale to use for the environment. This should be less than \u003Ccode>100\u003C/code>x for better simulation accuracy. Defaults to \u003Ccode>20\u003C/code>x realtime.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>quality_level\u003C/code>\u003C/td>\n\u003Ctd>The quality level to use when rendering the environment. Ranges between \u003Ccode>0\u003C/code> (lowest) and \u003Ccode>5\u003C/code> (highest). Defaults to \u003Ccode>0\u003C/code>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>base_port\u003C/code>\u003C/td>\n\u003Ctd>The base port to use to communicate with the environment. Defaults to \u003Ccode>50039\u003C/code>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>worker_id\u003C/code>\u003C/td>\n\u003Ctd>Used as base port shift to avoid communication conflicts. Defaults to \u003Ccode>0\u003C/code>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>env_path\u003C/code>\u003C/td>\n\u003Ctd>The path to the environment executable. Overrides \u003Ccode>watch\u003C/code>. Defaults to the provided Soccer-Twos environment.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>flatten_branched\u003C/code>\u003C/td>\n\u003Ctd>If \u003Ccode>True\u003C/code>, turn branched discrete action spaces into a \u003Ccode>Discrete\u003C/code> space rather than \u003Ccode>MultiDiscrete\u003C/code>. Defaults to \u003Ccode>False\u003C/code>.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>opponent_policy\u003C/code>\u003C/td>\n\u003Ctd>The policy to use for the opponent when \u003Ccode>variation==team_vs_policy\u003C/code>. Defaults to a random agent.\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Ccode>single_player\u003C/code>\u003C/td>\n\u003Ctd>Whether to let the agent control a single player, while the other stays still. Only works when \u003Ccode>variation==team_vs_policy\u003C/code>. Defaults to \u003Ccode>False\u003C/code>.\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\n\u003Cp>The created \u003Ccode>env\u003C/code> exposes a basic \u003Ca href=\"https://gym.openai.com/\">Gym\u003C/a> interface.\nNamely, the methods \u003Ccode>reset()\u003C/code>, \u003Ccode>step(action: Dict[int, np.ndarray])\u003C/code> and \u003Ccode>close()\u003C/code> are available.\nThe \u003Ccode>render()\u003C/code> method has currently no effect and \u003Ccode>soccer_twos.make(render=True)\u003C/code> should be used instead.\nThe \u003Ccode>step()\u003C/code> method returns extra information about the player and the ball in the last tuple element. This extra information includes position (x, y) and velocity (x, y) for the ball and players and y rotation (in degrees) of the players.\u003C/p>\n\u003Cp>We expose an RLLib-compatible multiagent interface.\nThis means, for example, that \u003Ccode>action\u003C/code> should be a \u003Ccode>dict\u003C/code> where keys are integers in \u003Ccode>{0, 1, 2, 3}\u003C/code> corresponding to each agent.\nAdditionally, values should be single actions shaped like \u003Ccode>env.action_space.shape\u003C/code>.\nObservations and rewards follow the same structure. Dones are only set for the key \u003Ccode>__all__\u003C/code>, which means &quot;all agents&quot;.\nAgents 0 and 1 correspond to the blue team and agents 2 and 3 correspond to the orange team.\u003C/p>\n\u003Cp>Here&#39;s a full example:\u003C/p>\n\u003Cpre>\u003Ccode class=\"language-python\">\u003Cspan class=\"hljs-keyword\">import\u003C/span> soccer_twos\n\nenv = soccer_twos.make(render=\u003Cspan class=\"hljs-literal\">True\u003C/span>)\n\u003Cspan class=\"hljs-built_in\">print\u003C/span>(\u003Cspan class=\"hljs-string\">&quot;Observation Space: &quot;\u003C/span>, env.observation_space.shape)\n\u003Cspan class=\"hljs-built_in\">print\u003C/span>(\u003Cspan class=\"hljs-string\">&quot;Action Space: &quot;\u003C/span>, env.action_space.shape)\n\nteam0_reward = \u003Cspan class=\"hljs-number\">0\u003C/span>\nteam1_reward = \u003Cspan class=\"hljs-number\">0\u003C/span>\n\u003Cspan class=\"hljs-keyword\">while\u003C/span> \u003Cspan class=\"hljs-literal\">True\u003C/span>:\n    obs, reward, done, info = env.step(\n        {\n            \u003Cspan class=\"hljs-number\">0\u003C/span>: env.action_space.sample(),\n            \u003Cspan class=\"hljs-number\">1\u003C/span>: env.action_space.sample(),\n            \u003Cspan class=\"hljs-number\">2\u003C/span>: env.action_space.sample(),\n            \u003Cspan class=\"hljs-number\">3\u003C/span>: env.action_space.sample(),\n        }\n    )\n\n    team0_reward += reward[\u003Cspan class=\"hljs-number\">0\u003C/span>] + reward[\u003Cspan class=\"hljs-number\">1\u003C/span>]\n    team1_reward += reward[\u003Cspan class=\"hljs-number\">2\u003C/span>] + reward[\u003Cspan class=\"hljs-number\">3\u003C/span>]\n    \u003Cspan class=\"hljs-keyword\">if\u003C/span> done[\u003Cspan class=\"hljs-string\">&quot;__all__&quot;\u003C/span>]:\n        \u003Cspan class=\"hljs-built_in\">print\u003C/span>(\u003Cspan class=\"hljs-string\">&quot;Total Reward: &quot;\u003C/span>, team0_reward, \u003Cspan class=\"hljs-string\">&quot; x &quot;\u003C/span>, team1_reward)\n        team0_reward = \u003Cspan class=\"hljs-number\">0\u003C/span>\n        team1_reward = \u003Cspan class=\"hljs-number\">0\u003C/span>\n        env.reset()\n\u003C/code>\u003C/pre>\u003Ch4>Environment State Configuration\u003C/h4>\n\u003Cp>The \u003Ccode>env_channel\u003C/code> parameter allows for state configuration inside the simulation. To use it, you must first instantiate a \u003Ccode>soccer_twos.side_channels.EnvConfigurationChannel\u003C/code> and pass it in the \u003Ccode>soccer_twos.make\u003C/code> call. Here&#39;s a full example:\u003C/p>\n\u003Cpre>\u003Ccode class=\"language-python\">\u003Cspan class=\"hljs-keyword\">import\u003C/span> soccer_twos\n\u003Cspan class=\"hljs-keyword\">from\u003C/span> soccer_twos.side_channels \u003Cspan class=\"hljs-keyword\">import\u003C/span> EnvConfigurationChannel\nenv_channel = EnvConfigurationChannel()\nenv = soccer_twos.make(env_channel=env_channel)\nenv.reset()\nenv_channel.set_parameters(\n    ball_state={\n        \u003Cspan class=\"hljs-string\">&quot;position&quot;\u003C/span>: [\u003Cspan class=\"hljs-number\">1\u003C/span>, -\u003Cspan class=\"hljs-number\">1\u003C/span>],\n        \u003Cspan class=\"hljs-string\">&quot;velocity&quot;\u003C/span>: [-\u003Cspan class=\"hljs-number\">1.2\u003C/span>, \u003Cspan class=\"hljs-number\">3\u003C/span>],\n    },\n    players_states={\n        \u003Cspan class=\"hljs-number\">3\u003C/span>: {\n            \u003Cspan class=\"hljs-string\">&quot;position&quot;\u003C/span>: [-\u003Cspan class=\"hljs-number\">5\u003C/span>, \u003Cspan class=\"hljs-number\">10\u003C/span>],\n            \u003Cspan class=\"hljs-string\">&quot;rotation_y&quot;\u003C/span>: \u003Cspan class=\"hljs-number\">45\u003C/span>,\n            \u003Cspan class=\"hljs-string\">&quot;velocity&quot;\u003C/span>: [\u003Cspan class=\"hljs-number\">5\u003C/span>, \u003Cspan class=\"hljs-number\">0\u003C/span>],\n        }\n    }\n)\n\u003Cspan class=\"hljs-comment\"># env.step()\u003C/span>\n\u003C/code>\u003C/pre>\u003Cp>All the \u003Ccode>env_channel.set_parameters\u003C/code> method parameters and dict keys are optional. You can set a single parameter at a time or the full game state if you need so.\u003C/p>\n\u003Ch3>Evaluating\u003C/h3>\n\u003Cp>To quickly evaluate one agent against another and generate comprehensive statistics, you may use the \u003Ccode>evaluate\u003C/code> script:\u003C/p>\n\u003Cp>\u003Ccode>python -m soccer_twos.evaluate -m1 agent_module -m2 opponent_module\u003C/code>\u003C/p>\n\u003Cp>You can also provide the \u003Ccode>--episodes\u003C/code> option to specify the number of episodes to evaluate on (defaults to 100).\u003C/p>\n\u003Ch3>Watching\u003C/h3>\n\u003Cp>To rollout via CLI, you must create an implementation (subclass) of \u003Ccode>soccer_twos.AgentInterface\u003C/code> and run:\u003C/p>\n\u003Cp>\u003Ccode>python -m soccer_twos.watch -m agent_module\u003C/code>\u003C/p>\n\u003Cp>This will run a human-friendly version of the environment, where your agent will play against itself.\nYou may instead use the options \u003Ccode>-m1 agent_module -m2 opponent_module\u003C/code> to play against a different opponent.\nYou may also implement your own rollout script using \u003Ccode>soccer_twos.make(watch=True)\u003C/code>.\u003C/p>\n\u003Cdiv align=\"center\">\n    \u003Cimg class=\"text-img mw-100\" src=\"https://raw.githubusercontent.com/bryanoliveira/soccer-twos-env/master/images/screenshot.png\"/>\n\u003C/div>\n\n\u003Ch2>Environment Specs\u003C/h2>\n\u003Cp>This environment is based on Unity ML Agents&#39; \u003Ca href=\"https://github.com/Unity-Technologies/ml-agents/blob/92ff2c26fef7174b443115454fa1c6045d622bc2/docs/Learning-Environment-Examples.md#soccer-twos\">Soccer Twos\u003C/a>, so most of the specs are the same. Here, four agents compete in a 2 vs 2 toy soccer game, aiming to get the ball into the opponent&#39;s goal while preventing the ball from entering own goal.\u003C/p>\n\u003Cdiv align=\"center\">\n    \u003Cimg class=\"text-img mw-100\" src=\"https://raw.githubusercontent.com/bryanoliveira/soccer-twos-env/master/images/obs.png\"/>\n\u003C/div>\n\u003Cbr/>\n\n\u003Cul>\n\u003Cli>Observation space: a 336-dimensional vector corresponding to 11 ray-casts forward distributed over 120 degrees and 3 ray-casts backward distributed over 90 degrees, each detecting 6 possible object types, along with the object&#39;s distance. The forward ray-casts contribute 264 state dimensions and backward 72 state dimensions over three observation stacks.\u003C/li>\n\u003Cli>Action space: 3 discrete branched actions (MultiDiscrete) corresponding to forward, backward, sideways movement, as well as rotation (27 discrete actions).\u003C/li>\n\u003Cli>Agent Reward Function:\u003Cul>\n\u003Cli>\u003Ccode>1 - accumulated time penalty\u003C/code>: when ball enters opponent&#39;s goal. Accumulated time penalty is incremented by \u003Ccode>(1 / MaxSteps)\u003C/code> every fixed update and is reset to 0 at the beginning of an episode. In this build, \u003Ccode>MaxSteps = 5000\u003C/code>.\u003C/li>\n\u003Cli>\u003Ccode>-1\u003C/code>: when ball enters team&#39;s goal.\u003C/li>\n\u003C/ul>\n\u003C/li>\n\u003C/ul>\n\u003Cp>Note that while this is true when \u003Ccode>variation == EnvType.multiagent_player\u003C/code>, observation and action spaces may vary for other variations.\u003C/p>\n",readingTime:"6 min read",title:"Multiagent Soccer Environment for Python",slug:"2021-09-05-soccer-twos-env",date:"2021-09-05",urls:[{cta:"Python Package",url:"https://pypi.org/project/soccer-twos/"},{cta:"Environment Code",url:"https://github.com/bryanoliveira/soccer-twos-env"},{cta:"Simulator Code",url:"https://github.com/bryanoliveira/unity-soccer"}],type:"Reinforcement Learning Environment",tags:["project","game","rl"],image:"/img/soccer.gif",description:"A pre-compiled Soccer-Twos environment with multi-agent Gym-compatible wrappers and a human-friendly visualizer. Built on top of Unity ML Agents to be used as final assignment for the Reinforcement Learning Minicourse at CEIA / Deep Learning Brazil."},slug:"2021-09-05-soccer-twos-env"},"uses":{"params":["slug"]}}];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.B04duy-5.js"),
+						import("../_app/immutable/entry/app.CkZncjha.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+    </body>
+</html>
